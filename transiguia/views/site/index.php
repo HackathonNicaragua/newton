@@ -3,15 +3,23 @@
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
+use yii\helpers\BaseUrl;
+use yii\helpers\Html;
+
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <h1>Bienvenido</h1>
+        <?php
+            if (Yii::$app->user->isGuest){
+                echo Html::a('Iniciar sesion', ['/site/login'], ['class'=>'btn btn-primary']);
+                echo "<p><p class='lead'>Si aun no tiene cuenta le sugerimos crear una</p>";
+             }
+             else {
+                echo Html::a('Comenzar', ['/controller/action'], ['class'=>'btn btn-success']);
+             }
+        ?>
     </div>
 
     <div class="body-content">
