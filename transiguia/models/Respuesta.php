@@ -31,7 +31,7 @@ class Respuesta extends \yii\db\ActiveRecord
     {
         return [
             [['IdPregunta'], 'integer'],
-            [['Respuesta'], 'string', 'max' => 11],
+            [['Respuesta'], 'string', 'max' => 255],
         ];
     }
 
