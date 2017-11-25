@@ -33,7 +33,7 @@
             margin-bottom: 20px;
             margin-top: 20px;
         }
-        
+
         #miPanel {
             background-color: #f2f2f2;
         }
@@ -48,10 +48,10 @@
         <ul data-role="listview">
             <img src="img/icon.png" id="logopanel">
             <li data-icon="home">
-                <a href="#">Inicio</a>
+                <a href="#paginaPrincipal">Inicio</a>
             </li>
             <li>
-                <a href="#" class="buttonInciso">Ley 431</a>
+                <a href="#paginaLey431" class="buttonInciso">Ley 431</a>
             </li>
             <li>
                 <a href="#" class="buttonInciso">Señales</a>
@@ -70,13 +70,203 @@
         <a href="#miPanel" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-bars" id="buttonMenu">Menú</a>
         <h1>TransiGuía Móvil</h1>
     </div>
-    
+
     <!-- Aqui se encuentra la pagina de inicio de toda la app, y es la que se carga por defecto al iniciar la app -->
     <div data-role="page" id="paginaPrincipal">
         <div data-role="main" class="ui-content">
-            <center><p><b>Bienvenido a la aplicación TransiGuía Móvil</b></p></center>
+            <center>
+                <p><b>Bienvenido a la aplicación TransiGuía Móvil</b></p>
+            </center>
             <center><img src="img/icon.png"></center>
-            <center><p>Para navegar, presiona el botón de menú en la esquina superior izquierda</p></center>
+            <center>
+                <p>Para navegar, presiona el botón de menú en la esquina superior izquierda</p>
+            </center>
+        </div>
+    </div>
+
+    <!-- Aqui se encuentra la pagina de la ley 431, donde se pueden filtrar por articulo -->
+    <div data-role="page" id="paginaLey431">
+        <div data-role="main" class="ui-content">
+            <center>
+                <p><b>Aqui puedes encontrar todos los articulos de la ley 431 con sus respectivos incisos, aqui puedes buscar por numero de articulo</b></p>
+            </center>
+            <center>
+                <p><b>Busca por número de artículo:</b></p>
+            </center>
+            <center>
+                <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Busca por # de artículo..." data-inset="true
+                ">
+                    <li><a href="#art1">Artículo 1</a></li>
+                    <li><a href="#art2">Artículo 2</a></li>
+                    <li><a href="#art3">Artículo 3</a></li>
+                    <li><a href="#art4">Artículo 4</a></li>
+                    <li><a href="#art5">Artículo 5</a></li>
+                    <li><a href="#art6">Artículo 6</a></li>
+                    <li><a href="#art7">Artículo 7</a></li>
+                    <li><a href="#art8">Artículo 8</a></li>
+                    <li><a href="#art9">Artículo 9</a></li>
+                    <li><a href="#art10">Artículo 10</a></li>
+                    <li><a href="#art11">Artículo 11</a></li>
+                    <li><a href="#art12">Artículo 12</a></li>
+                    <li><a href="#art13">Artículo 13</a></li>
+                    <li><a href="#art14">Artículo 14</a></li>
+                    <li><a href="#art15">Artículo 15</a></li>
+                    <li><a href="#art16">Artículo 16</a></li>
+                    <li><a href="#art17">Artículo 17</a></li>
+                    <li><a href="#art18">Artículo 18</a></li>
+                    <li><a href="#art19">Artículo 19</a></li>
+                    <li><a href="#art20">Artículo 20</a></li>
+                    <li><a href="#art21">Artículo 21</a></li>
+                    <li><a href="#art22">Artículo 22</a></li>
+                    <li><a href="#art23">Artículo 23</a></li>
+                    <li><a href="#art24">Artículo 24</a></li>
+                    <li><a href="#art25">Artículo 25</a></li>
+                    <li><a href="#art26">Artículo 26</a></li>
+                    <li><a href="#art27">Artículo 27</a></li>
+                    <li><a href="#art28">Artículo 28</a></li>
+                    <li><a href="#art29">Artículo 29</a></li>
+                    <li><a href="#art30">Artículo 30</a></li>
+                    <li><a href="#art31">Artículo 31</a></li>
+                    <li><a href="#art32">Artículo 32</a></li>
+                    <li><a href="#art33">Artículo 33</a></li>
+                    <li><a href="#art34">Artículo 34</a></li>
+                    <li><a href="#art35">Artículo 35</a></li>
+                    <li><a href="#art36">Artículo 36</a></li>
+                    <li><a href="#art37">Artículo 37</a></li>
+                    <li><a href="#art38">Artículo 38</a></li>
+                    <li><a href="#art39">Artículo 39</a></li>
+                    <li><a href="#art40">Artículo 40</a></li>
+                    <li><a href="#art41">Artículo 41</a></li>
+                    <li><a href="#art42">Artículo 42</a></li>
+                    <li><a href="#art43">Artículo 43</a></li>
+                    <li><a href="#art44">Artículo 44</a></li>
+                    <li><a href="#art45">Artículo 45</a></li>
+                    <li><a href="#art46">Artículo 46</a></li>
+                    <li><a href="#art47">Artículo 47</a></li>
+                    <li><a href="#art48">Artículo 48</a></li>
+                    <li><a href="#art49">Artículo 49</a></li>
+                    <li><a href="#art50">Artículo 50</a></li>
+                    <li><a href="#art51">Artículo 51</a></li>
+                    <li><a href="#art52">Artículo 52</a></li>
+                    <li><a href="#art53">Artículo 53</a></li>
+                    <li><a href="#art54">Artículo 54</a></li>
+                    <li><a href="#art55">Artículo 55</a></li>
+                    <li><a href="#art56">Artículo 56</a></li>
+                    <li><a href="#art57">Artículo 57</a></li>
+                    <li><a href="#art58">Artículo 58</a></li>
+                    <li><a href="#art59">Artículo 59</a></li>
+                    <li><a href="#art60">Artículo 60</a></li>
+                    <li><a href="#art61">Artículo 61</a></li>
+                    <li><a href="#art62">Artículo 62</a></li>
+                    <li><a href="#art63">Artículo 63</a></li>
+                    <li><a href="#art64">Artículo 64</a></li>
+                    <li><a href="#art65">Artículo 65</a></li>
+                    <li><a href="#art66">Artículo 66</a></li>
+                    <li><a href="#art67">Artículo 67</a></li>
+                    <li><a href="#art68">Artículo 68</a></li>
+                    <li><a href="#art69">Artículo 69</a></li>
+                    <li><a href="#art70">Artículo 70</a></li>
+                    <li><a href="#art71">Artículo 71</a></li>
+                    <li><a href="#art72">Artículo 72</a></li>
+                    <li><a href="#art73">Artículo 73</a></li>
+                    <li><a href="#art74">Artículo 74</a></li>
+                    <li><a href="#art75">Artículo 75</a></li>
+                    <li><a href="#art76">Artículo 76</a></li>
+                    <li><a href="#art77">Artículo 77</a></li>
+                    <li><a href="#art78">Artículo 78</a></li>
+                    <li><a href="#art79">Artículo 79</a></li>
+                    <li><a href="#art80">Artículo 80</a></li>
+                    <li><a href="#art81">Artículo 81</a></li>
+                    <li><a href="#art82">Artículo 82</a></li>
+                    <li><a href="#art83">Artículo 83</a></li>
+                    <li><a href="#art84">Artículo 84</a></li>
+                    <li><a href="#art85">Artículo 85</a></li>
+                    <li><a href="#art86">Artículo 86</a></li>
+                    <li><a href="#art87">Artículo 87</a></li>
+                    <li><a href="#art88">Artículo 88</a></li>
+                    <li><a href="#art89">Artículo 89</a></li>
+                    <li><a href="#art90">Artículo 90</a></li>
+                    <li><a href="#art91">Artículo 91</a></li>
+                    <li><a href="#art92">Artículo 92</a></li>
+                    <li><a href="#art93">Artículo 93</a></li>
+                    <li><a href="#art94">Artículo 94</a></li>
+                    <li><a href="#art95">Artículo 95</a></li>
+                    <li><a href="#art96">Artículo 96</a></li>
+                    <li><a href="#art97">Artículo 97</a></li>
+                    <li><a href="#art98">Artículo 98</a></li>
+                    <li><a href="#art99">Artículo 99</a></li>
+                    <li><a href="#art100">Artículo 100</a></li>
+                    <li><a href="#art101">Artículo 101</a></li>
+                    <li><a href="#art102">Artículo 102</a></li>
+                    <li><a href="#art103">Artículo 103</a></li>
+                    <li><a href="#art104">Artículo 104</a></li>
+                    <li><a href="#art105">Artículo 105</a></li>
+                    <li><a href="#art106">Artículo 106</a></li>
+                    <li><a href="#art107">Artículo 107</a></li>
+                    <li><a href="#art108">Artículo 108</a></li>
+                    <li><a href="#art109">Artículo 109</a></li>
+                    <li><a href="#art110">Artículo 110</a></li>
+                    <li><a href="#art111">Artículo 111</a></li>
+                    <li><a href="#art112">Artículo 112</a></li>
+                    <li><a href="#art113">Artículo 113</a></li>
+                    <li><a href="#art114">Artículo 114</a></li>
+                    <li><a href="#art115">Artículo 115</a></li>
+                    <li><a href="#art116">Artículo 116</a></li>
+                    <li><a href="#art117">Artículo 117</a></li>
+                    <li><a href="#art118">Artículo 118</a></li>
+                    <li><a href="#art119">Artículo 119</a></li>
+                    <li><a href="#art120">Artículo 120</a></li>
+                    <li><a href="#art121">Artículo 121</a></li>
+                    <li><a href="#art122">Artículo 122</a></li>
+                    <li><a href="#art123">Artículo 123</a></li>
+                    <li><a href="#art124">Artículo 124</a></li>
+                    <li><a href="#art125">Artículo 125</a></li>
+                    <li><a href="#art126">Artículo 126</a></li>
+                    <li><a href="#art127">Artículo 127</a></li>
+                    <li><a href="#art128">Artículo 128</a></li>
+                    <li><a href="#art129">Artículo 129</a></li>
+                    <li><a href="#art130">Artículo 130</a></li>
+                    <li><a href="#art131">Artículo 131</a></li>
+                    <li><a href="#art132">Artículo 132</a></li>
+                    <li><a href="#art133">Artículo 133</a></li>
+                    <li><a href="#art134">Artículo 134</a></li>
+                    <li><a href="#art135">Artículo 135</a></li>
+                    <li><a href="#art136">Artículo 136</a></li>
+                    <li><a href="#art137">Artículo 137</a></li>
+                    <li><a href="#art138">Artículo 138</a></li>
+                    <li><a href="#art139">Artículo 139</a></li>
+                    <li><a href="#art140">Artículo 140</a></li>
+                    <li><a href="#art141">Artículo 141</a></li>
+                    <li><a href="#art142">Artículo 142</a></li>
+                    <li><a href="#art143">Artículo 143</a></li>
+                    <li><a href="#art144">Artículo 144</a></li>
+                    <li><a href="#art145">Artículo 145</a></li>
+                    <li><a href="#art146">Artículo 146</a></li>
+                    <li><a href="#art147">Artículo 147</a></li>
+                    <li><a href="#art148">Artículo 148</a></li>
+                    <li><a href="#art149">Artículo 149</a></li>
+                    <li><a href="#art150">Artículo 150</a></li>
+                    <li><a href="#art151">Artículo 151</a></li>
+                    <li><a href="#art152">Artículo 152</a></li>
+                    <li><a href="#art153">Artículo 153</a></li>
+                    <li><a href="#art154">Artículo 154</a></li>
+                    <li><a href="#art155">Artículo 155</a></li>
+                    <li><a href="#art156">Artículo 156</a></li>
+                    <li><a href="#art157">Artículo 157</a></li>
+                    <li><a href="#art158">Artículo 158</a></li>
+                    <li><a href="#art159">Artículo 159</a></li>
+                    <li><a href="#art160">Artículo 160</a></li>
+                    <li><a href="#art161">Artículo 161</a></li>
+                    <li><a href="#art162">Artículo 162</a></li>
+                    <li><a href="#art163">Artículo 163</a></li>
+                    <li><a href="#art164">Artículo 164</a></li>
+                    <li><a href="#art165">Artículo 165</a></li>
+                    <li><a href="#art166">Artículo 166</a></li>
+                    <li><a href="#art167">Artículo 167</a></li>
+                    <li><a href="#art168">Artículo 168</a></li>
+                    <li><a href="#art169">Artículo 169</a></li>
+                </ul>
+            </center>
         </div>
     </div>
 </body>
