@@ -3,18 +3,82 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css">
     <script src="jquery/jquery-1.11.3.min.js"></script>
     <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-<!--    <script src="js/cordova.js"></script>-->
+    <!--    <script src="js/cordova.js"></script>-->
+    <script>
+        //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
+        $(function() {
+            $("[data-role = 'header']").toolbar({
+                theme: "a"
+            });
+        });
+    </script>
+    <script>
+        //Esta funcion es para inicializar el panel en todas las paginas, ya que es un panel externo, necesita ser inicializado
+        jQuery(function() {
+            $('#miPanel').enhanceWithin().panel();
+        });
+    </script>
+    <style>
+        #logopanel {
+            display: block;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        
+        #miPanel {
+            background-color: #f2f2f2;
+        }
+    </style>
     <title>TransiGuía Móvil</title>
 </head>
 
 <body>
+    <!-- Aqui se crea el panel lateral que servira para todas las pages -->
+    <div data-role="panel" id="miPanel" data-position="left" data-display="overlay" data-theme="a">
 
+        <ul data-role="listview">
+            <img src="img/icon.png" id="logopanel">
+            <li data-icon="home">
+                <a href="#">Inicio</a>
+            </li>
+            <li>
+                <a href="#" class="buttonInciso">Ley 431</a>
+            </li>
+            <li>
+                <a href="#" class="buttonInciso">Señales</a>
+            </li>
+            <li>
+                <a href="#" class="buttonInciso">Test</a>
+            </li>
+            <li>
+                <a href="#" class="buttonInciso">Info. Contacto</a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- Aqui se crea el header que se utilizara para TODAS las pages -->
+    <div data-role="header">
+        <a href="#miPanel" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-bars" id="buttonMenu">Menú</a>
+        <h1>TransiGuía Móvil</h1>
+    </div>
+    
+    <!-- Aqui se encuentra la pagina de inicio de toda la app, y es la que se carga por defecto al iniciar la app -->
+    <div data-role="page" id="paginaPrincipal">
+        <div data-role="main" class="ui-content">
+            <center><p><b>Bienvenido a la aplicación TransiGuía Móvil</b></p></center>
+            <center><img src="img/icon.png"></center>
+            <center><p>Para navegar, presiona el botón de menú en la esquina superior izquierda</p></center>
+        </div>
+    </div>
 </body>
 
 </html>
