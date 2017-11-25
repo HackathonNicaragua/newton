@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6502ed3e-c875-44a9-a659-c2fc925773e5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/newton.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/bower_components/Flot/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/bower_components/Flot/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/bower_components/Flot/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/transiguia/vendor/almasaeed2010/adminlte/bower_components/Flot/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/composer.json" afterPath="$PROJECT_DIR$/transiguia/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/composer.lock" afterPath="$PROJECT_DIR$/transiguia/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/transiguia/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/transiguia/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/transiguia/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/transiguia/vendor/composer/installed.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transiguia/vendor/yiisoft/extensions.php" afterPath="$PROJECT_DIR$/transiguia/vendor/yiisoft/extensions.php" />
-    </list>
+    <list default="true" id="6502ed3e-c875-44a9-a659-c2fc925773e5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +105,7 @@
       <path value="$PROJECT_DIR$/transiguia/vendor/fortawesome/font-awesome" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="128" />
     <option name="width" value="1440" />
@@ -199,15 +175,15 @@
       <updated>1511637610395</updated>
       <workItem from="1511637611647" duration="660000" />
       <workItem from="1511640608594" duration="325000" />
-      <workItem from="1511641636129" duration="134000" />
+      <workItem from="1511641636129" duration="630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1119000" />
+    <option name="totallyTimeSpent" value="1615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

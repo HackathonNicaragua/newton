@@ -9,7 +9,6 @@ use Yii;
  *
  * @property integer $Id
  * @property string $Descripcion
- * @property integer $IdUsuario
  *
  * @property Articulo[] $articulos
  * @property UsuarioCategoria[] $usuarioCategorias
@@ -30,7 +29,6 @@ class Categoria extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['IdUsuario'], 'integer'],
             [['Descripcion'], 'string', 'max' => 255],
         ];
     }
@@ -43,7 +41,6 @@ class Categoria extends \yii\db\ActiveRecord
         return [
             'Id' => 'ID',
             'Descripcion' => 'Descripcion',
-            'IdUsuario' => 'Id Usuario',
         ];
     }
 
