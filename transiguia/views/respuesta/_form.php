@@ -2,38 +2,39 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-use app\models\Articulo;
+use app\models\Pregunta;
 use yii\helpers\ArrayHelper;
 use kartik\select2\select2;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Pregunta */
+/* @var $model app\models\Respuesta */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="pregunta-form">
+<div class="respuesta-form">
 
     <?php $form = ActiveForm::begin(); ?>
+
     <div class="row">
         <div class="col-md-4">
-            <label for="">Nombre del Articulo</label>
+            <label for="">Enunciado de la pregunta</label>
             <?=
             Select2::widget([
-                'name' => 'IdArticulo',
+                'name' => 'IdPregunta',
                 'model'=>$model,
-                'attribute'=> 'IdArticulo',
+                'attribute'=> 'IdPregunta',
                 'value' => '',
-                'data' => ArrayHelper::map(Articulo::find()->asArray()->all(), 'Id', 'Descripcion'),
+                'data' => ArrayHelper::map(Pregunta::find()->asArray()->all(), 'Id', 'Pregunta'),
                 'options' =>
                     [
                         'multiple' => false,
-                        'placeholder' => 'Seleccione Articulo'
+                        'placeholder' => 'Seleccione Pregunta'
                     ]
             ]);
             ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'Pregunta')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'Respuesta')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
     <div class="form-group">
