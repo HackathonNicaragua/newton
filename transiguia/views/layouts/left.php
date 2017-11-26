@@ -24,6 +24,7 @@
                     ['label' => '¿Quieres saber más?', 'icon' => 'question-circle', 'url' => ['site/saber-mas']],
                     ['label' => 'Calculadora de multas', 'icon' => 'calculator', 'url' => ['site/calculadora']],
                     ['label' => 'Señales de tránsito', 'icon' => 'hand-peace-o', 'url' => ['site/interes']],
+                    ['label' => 'Señalización', 'icon' => 'warning', 'url' => ['site/senales']],
                     //['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     // [
                     //     'label' => 'TransiGuia',
@@ -50,7 +51,7 @@
                     //             ],
                     //         ],*/
                     //     ],
-                    //],
+                    // ],
                 ],
             ]
         ) ?>

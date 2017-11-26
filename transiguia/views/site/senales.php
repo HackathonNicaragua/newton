@@ -11,7 +11,6 @@ use yii\helpers\Html;
 <div class="row">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="...">
             <div class="caption">
                 <div class="text-center"><h2><i class="fa fa-info-circle fa-5x"></i></h2></div>
                 <h3>Informativas</h3>
@@ -27,7 +26,6 @@ use yii\helpers\Html;
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="...">
             <div class="caption">
                 <div class="text-center"><h2><i class="fa fa-exclamation-triangle fa-5x"></i></h2></div>
                 <h3>Preventivas</h3>
@@ -41,7 +39,6 @@ use yii\helpers\Html;
     </div>
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img src="...">
             <div class="caption">
                 <div class="text-center"><h2><i class="fa fa-legal fa-5x"></i></h2></div>
                 <h3>Reglamentarias</h3>

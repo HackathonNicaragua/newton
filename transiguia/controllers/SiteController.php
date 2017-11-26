@@ -80,6 +80,11 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionSenales()
+    {
+        return $this->render('senales');
+    }
+
     public function  actionTest()
     {
         return $this->render('test');
