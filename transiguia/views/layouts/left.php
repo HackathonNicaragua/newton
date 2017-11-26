@@ -20,10 +20,10 @@
                 'items' => [
                     ['label' => 'Menu', 'options' => ['class' => 'header']],
                     ['label' => 'Inicio', 'icon' => 'home', 'url' => ['site/index']],
-                    ['label' => 'Prueba tus conocimientos', 'icon' => 'fa fa-id-card', 'url' => ['site/index']],
-                    ['label' => '¿Quieres saber más?', 'icon' => 'question-circle', 'url' => ['/debug']],
-                    ['label' => 'Calculadora de multas', 'icon' => 'calculator', 'url' => ['/debug']],
-                    ['label' => 'Te puede interesar', 'icon' => 'hand-peace-o', 'url' => ['/debug']],
+                    ['label' => 'Prueba tus conocimientos', 'icon' => 'fa fa-id-card', 'url' => ['site/test']],
+                    ['label' => '¿Quieres saber más?', 'icon' => 'question-circle', 'url' => ['site/saber-mas']],
+                    ['label' => 'Calculadora de multas', 'icon' => 'calculator', 'url' => ['site/calculadora']],
+                    ['label' => 'Te puede interesar', 'icon' => 'hand-peace-o', 'url' => ['site/interes']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'TransiGuia',
