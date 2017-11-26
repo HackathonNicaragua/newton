@@ -27,17 +27,17 @@ use yii\helpers\Html;
 
         <div class="row">
             <div class="col-lg-4">
-              <img style="height:250px" class="img img-responsive img-rounded" src="http://www.policia.gob.ni/wp-content/uploads/2017/11/Conferencia-20de-Nov-2017-2.jpg"></img>
+              <img style="height:250px" class="img img-responsive img-rounded" src=<?php echo Yii::$app->homeUrl."./images/leydetransito.jpg" ?>></img>
                 <h2>Conductores continúan incumpliendo con la Ley de Tránsito</h2>
                 <p>Tnte. Grethel Vargas Espinoza El número de accidentes de tránsito en las diferentes vías del país aumentaron esta semana, con un total de 832 haciendo una diferencia de 82 accidentes…</p>
 
                 <p><a class="btn btn-default" href="http://www.policia.gob.ni/?p=12547">Leer más &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-              <img style="height:250px" class="img img-responsive img-rounded"src="http://quintamarcha.com/wp-content/uploads/2013/11/1-curso-conduccion-ford-nov-2013.jpg"></img>
+              <img style="height:250px" class="img img-responsive img-rounded"src=<?php echo Yii::$app->homeUrl."./images/curso-conduccion.jpg" ?>></img>
                 <h2>Talleres de conduccion</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p>Encuentra las mejores escuelas de manejo y donde ubicarlas, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
@@ -45,15 +45,15 @@ use yii\helpers\Html;
                 <p><a class="btn btn-default" href="http://r.duckduckgo.com/l/?kh=-1&uddg=http%3A%2F%2Fquintamarcha.com%2Fwp-content%2Fuploads%2F2013%2F11%2F1-curso-conduccion-ford-nov-2013.jpg">Leer más &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-              <img style="height:250px" class="img img-responsive img-rounded"src="https://cartelesdeseguridad.files.wordpress.com/2010/06/senales-de-transito2.png"></img>
-                <h2>Heading</h2>
+              <img style="height:250px" class="img img-responsive img-rounded"src=<?php echo Yii::$app->homeUrl."./images/practica-senales-de-transito.png" ?>></img>
+                <h2>Practicas</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                <p>Realica una serie de practicas que te ayudaran a saber si estas listo para el examen de conduccion, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Leer más &raquo;</a></p>
+                <p><a class="btn btn-default" href="site/test">Leer más &raquo;</a></p>
             </div>
         </div>
 

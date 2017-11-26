@@ -25,32 +25,32 @@
                     ['label' => 'Calculadora de multas', 'icon' => 'calculator', 'url' => ['site/calculadora']],
                     ['label' => 'Te puede interesar', 'icon' => 'hand-peace-o', 'url' => ['site/interes']],
                     //['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    [
-                        'label' => 'TransiGuia',
-                        'icon' => 'car',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Señalización', 'icon' => 'warning', 'url' => ['site/seniales'],],
-                            ['label' => '¡Consigue tu licencia!', 'icon' => 'dashboard', 'url' => ['/debug'],],
-                            /*[
-                                'label' => 'Level One',
-                                'icon' => 'circle-o',
-                                'url' => '#',
-                                'items' => [
-                                    ['label' => 'Level Two', 'icon' => 'circle-o', 'url' => '#',],
-                                    [
-                                        'label' => 'Level Two',
-                                        'icon' => 'circle-o',
-                                        'url' => '#',
-                                        'items' => [
-                                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                                        ],
-                                    ],
-                                ],
-                            ],*/
-                        ],
-                    ],
+                    // [
+                    //     'label' => 'TransiGuia',
+                    //     'icon' => 'car',
+                    //     'url' => '#',
+                    //     'items' => [
+                    //         ['label' => 'Señalización', 'icon' => 'warning', 'url' => ['site/seniales'],],
+                    //         ['label' => '¡Consigue tu licencia!', 'icon' => 'dashboard', 'url' => ['/debug'],],
+                    //         /*[
+                    //             'label' => 'Level One',
+                    //             'icon' => 'circle-o',
+                    //             'url' => '#',
+                    //             'items' => [
+                    //                 ['label' => 'Level Two', 'icon' => 'circle-o', 'url' => '#',],
+                    //                 [
+                    //                     'label' => 'Level Two',
+                    //                     'icon' => 'circle-o',
+                    //                     'url' => '#',
+                    //                     'items' => [
+                    //                         ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
+                    //                         ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
+                    //                     ],
+                    //                 ],
+                    //             ],
+                    //         ],*/
+                    //     ],
+                    //],
                 ],
             ]
         ) ?>
