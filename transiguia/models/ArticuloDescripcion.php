@@ -27,7 +27,9 @@ class ArticuloDescripcion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Articulo', 'Descripcion'], 'string', 'max' => 255],
+            [['Id'], 'required'],
+            [['Id'], 'integer'],
+            [['Articulo', 'Descripcion'], 'string', 'max' => 1024],
         ];
     }
 
