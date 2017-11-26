@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Pregunta;
+use app\models\Multa;
+use yii\helpers\Json;
 
 class SiteController extends Controller
 {
@@ -37,6 +39,12 @@ class SiteController extends Controller
                 ],
             ],
         ];
+    }
+
+    public function actionGetMulta($Descripcion)
+    {
+        $multa = Multa::find()->where(['Descripcion'=>$Descripcion])->one();
+        echo Json::encode($multa);
     }
 
     /**

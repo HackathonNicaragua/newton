@@ -70,7 +70,35 @@ function PreguntasCotroller($scope, $http)
 
 function CalculadoraController($scope, $http)
 {
-    
+
+    $scope.Infracciones = []
+
+    $scope.deleteItem = function (index) {
+        $scope.Infracciones.splice(index, 1)
+
+    }
+
+    $scope.addNew = function (evt) {
+
+        var Descripcion = $('#Descripcion').val()
+        var Precio = $('#Precio').val()
+
+        var infraccion = {
+            Descripcion:Descripcion,
+            Precio:Precio
+        }
+
+        $scope.Infracciones.push(infraccion)
+
+    }
+
+    $scope.total = function(){
+        sum = 0
+        angular.forEach($scope.Infracciones, function(infraccion){
+            sum += parseFloat(infraccion.Precio)
+        })
+        return sum
+    }
 }
 
 app.controller('PreguntasCotroller', PreguntasCotroller);
