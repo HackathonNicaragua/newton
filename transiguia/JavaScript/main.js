@@ -18,8 +18,14 @@ function PreguntasCotroller($scope, $http)
             }
             else {
                 mostrarGrafico();
+                mostrarBotonIntentar();
             }
         });
+    }
+
+    $scope.Intentar = function(target)
+    {
+        
     }
 
     function mostrarGrafico() {

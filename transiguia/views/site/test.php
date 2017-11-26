@@ -358,5 +358,11 @@ $preguntas = Json::encode(PreguntaRespuestaCompleta::find()->asArray()->all());
     </div>
 
     <br>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <div id="chartContainer" style="height: 370px; width: 100%;">
+    </div>
+
+    <br>
+
+    <button class="btn btn-primary btn-lg" style="display: none" id="again" ng-click="Intentar()">Intentar de nuevo</button>
+
 </div>
