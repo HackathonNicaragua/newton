@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-11-26 05:08:31
+Date: 2017-11-26 07:27:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -296,12 +296,67 @@ CREATE TABLE `multa` (
   `Descripcion` varchar(255) DEFAULT NULL,
   `Precio` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of multa
 -- ----------------------------
-INSERT INTO `multa` VALUES ('1', 'Conducir en estado de ebriedad', '1500');
+INSERT INTO `multa` VALUES ('1', 'Conducir en estado de ebriedad..', '1500');
+INSERT INTO `multa` VALUES ('2', 'Conducir bajo el efecto de drogas o sustancias psicotrópicas', '1500');
+INSERT INTO `multa` VALUES ('3', 'Provocar accidentes y darse a la fuga', '1500');
+INSERT INTO `multa` VALUES ('4', 'Provocar accidentes y darse a la fuga', '3000');
+INSERT INTO `multa` VALUES ('5', 'Estacionarse en la vía pública sin señales lumínicas o triángulos.', '200');
+INSERT INTO `multa` VALUES ('6', 'Aventajar en pendientes, curvas o puentes.', '400');
+INSERT INTO `multa` VALUES ('7', 'Desatender señales de emergencias,lumínicas sonoras de ambulancias,policía o bomberos.', '200');
+INSERT INTO `multa` VALUES ('8', 'Adelantar en línea continua amarilla.', '300');
+INSERT INTO `multa` VALUES ('9', ' Invasión de carril.', '400');
+INSERT INTO `multa` VALUES ('10', 'Giros indebidos, en \"U\" y zig zag.', '200');
+INSERT INTO `multa` VALUES ('11', 'Conducir con las puertas abiertas transporte colectivo y de carga.', '400');
+INSERT INTO `multa` VALUES ('12', 'Conducir en contra de la vía.', '300');
+INSERT INTO `multa` VALUES ('13', 'Exceso de pasajeros o de carga.', '300');
+INSERT INTO `multa` VALUES ('14', 'Conducir, acompañar o transportar niños menores de siete años en el asiento delantero o niños en los brazos de adultos en el asiento delantero sin cinturón de seguridad.', '200');
+INSERT INTO `multa` VALUES ('15', 'Desantender señales de tráfico siempre que estén', '200');
+INSERT INTO `multa` VALUES ('16', 'Conducir carga sin la debida señalización.', '200');
+INSERT INTO `multa` VALUES ('17', 'Obstrucción de la libre circulación vehicular.', '300');
+INSERT INTO `multa` VALUES ('18', 'Conducir cuadraciclos en las playas en época de temporada de verano.', '450');
+INSERT INTO `multa` VALUES ('19', 'Conducir buses y camiones con el escape en posición horizontal.', '450');
+INSERT INTO `multa` VALUES ('20', 'Estacionar en carreteras, trailers, rastras y contenedores sin señal alguna.', '1000');
+INSERT INTO `multa` VALUES ('21', 'Conducir sin seguro de licencia y/o vehículo.', '100');
+INSERT INTO `multa` VALUES ('22', 'No guardar la distancia entre uno y otro vehículo.', '100');
+INSERT INTO `multa` VALUES ('23', 'No usar lonas o carpas en los camiones cuando trasladan carga a granel.', '300');
+INSERT INTO `multa` VALUES ('24', 'No portar triángulos fluorescentes.', '150');
+INSERT INTO `multa` VALUES ('25', 'Conducir atendiendo celulares.', '150');
+INSERT INTO `multa` VALUES ('26', 'Conducir motocicletas o cuadraciclos sin casco de protección', '150');
+INSERT INTO `multa` VALUES ('27', 'Recoger pasajeros fuera de la bahía o lugares no establecidos como paradas.', '150');
+INSERT INTO `multa` VALUES ('28', 'Estacionarse: frente a hidrantes, garajes, entradas de hospitales y clinicas, estacionamientos para discapacitados, aceras, andenes y parada de buses.', '100');
+INSERT INTO `multa` VALUES ('29', 'Conducir con las luces apagadas después de la hora indicada, o durante el día cuando hayan condiciones ambientales de lluvia, neblina o tolvaner', '300');
+INSERT INTO `multa` VALUES ('30', 'Circular con los vehículos sobre bulevares, aceras o andenes.', '150');
+INSERT INTO `multa` VALUES ('31', 'Conducir de retroceso en la vía pública.', '150');
+INSERT INTO `multa` VALUES ('32', 'Aventajar por la derecha en vías de un solo carril.', '150');
+INSERT INTO `multa` VALUES ('33', 'Circulación de vehículos sobre aceras o andenes.', '150');
+INSERT INTO `multa` VALUES ('34', 'Bajar o subir pasajeros por el lado izquierdo en la vía pública.', '150');
+INSERT INTO `multa` VALUES ('35', 'Realizar señales equivocadas sobre sus maniobras al conducir.', '150');
+INSERT INTO `multa` VALUES ('36', 'No respetar la preferencia peatonal o los cruces de colegios.', '400');
+INSERT INTO `multa` VALUES ('37', 'Conducir sin tener licencia', '300');
+INSERT INTO `multa` VALUES ('38', 'Conducir con aliento alcohólico, pero no en estado de ebriedad, de acuerdo a lo establecido en el artículo 27 de la presente Ley.', '100');
+INSERT INTO `multa` VALUES ('39', 'ehículo en mal estado mecánico.', '150');
+INSERT INTO `multa` VALUES ('40', 'Provocar ruidos escandalosos y pertuba- dores del medio ambiente.', '300');
+INSERT INTO `multa` VALUES ('41', 'Provocar exceso de humo.', '200');
+INSERT INTO `multa` VALUES ('42', 'Usar placas y/o circulación de otro vehículo.', '400');
+INSERT INTO `multa` VALUES ('43', 'Conducir sin portar placas y/o licencia de circulación.', '200');
+INSERT INTO `multa` VALUES ('44', 'Conducir con licencia en categorías diferentes a la autorizada.', '200');
+INSERT INTO `multa` VALUES ('45', 'Transporte colectivo, no detenerse a recoger pasajeros en las paradas.', '200');
+INSERT INTO `multa` VALUES ('46', 'Conducir con la matrícula vencida.</', '200');
+INSERT INTO `multa` VALUES ('47', 'Circular sin placas visibles.', '200');
+INSERT INTO `multa` VALUES ('48', 'Conducir con la licencia vencida.', '150');
+INSERT INTO `multa` VALUES ('49', 'Prestar servicio de transporte público sin la debida autorización.', '200');
+INSERT INTO `multa` VALUES ('50', 'Conducir fuera de la ruta autorizada, para el transporte colectivo', '100');
+INSERT INTO `multa` VALUES ('51', 'No reportar los cambios de las características físicas del vehiculo.', '100');
+INSERT INTO `multa` VALUES ('52', 'Conducir sin portar licencia.', '100');
+INSERT INTO `multa` VALUES ('53', 'No usar loderas en las llantas traseras en los vehículos de carga o de pasajeros.', '100');
+INSERT INTO `multa` VALUES ('54', 'Conducir vehículos sin espejo retrovisor o laterales.', '100');
+INSERT INTO `multa` VALUES ('55', 'Tirar basura, gases o desechos en la vía pública desde vehículos automotores.', '200');
+INSERT INTO `multa` VALUES ('56', 'Circulación de bicicletas o medios de transporte de tracción animal sin señales lumínicas visibles', '50');
 
 -- ----------------------------
 -- Table structure for `pregunta`
