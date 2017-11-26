@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <!--    <script src="js/cordova.js"></script>-->
+
     <script>
         //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
         $(function() {
@@ -23,6 +24,9 @@
         jQuery(function() {
             $('#miPanel').enhanceWithin().panel();
         });
+    </script>
+    <script>
+        $(document).on("pageinit", "#tipBienvenida", randomTip;
     </script>
     <style>
         /*        Este css es para evitar que el texto se corte en los botones de jquery mobile*/
@@ -82,17 +86,17 @@
             <li data-icon="home">
                 <a href="#paginaPrincipal">Inicio</a>
             </li>
-            <li>
-                <a href="#paginaTest" class="ui-btn">¡Consigue tu licencia!</a>
+            <li data-icon="star">
+                <a href="#paginaTest">¡Consigue tu licencia!</a>
             </li>
-            <li>
-                <a href="#" class="ui-btn">Calculadora Multas</a>
+            <li data-icon="plus">
+                <a href="#">Calculadora Multas</a>
             </li>
-            <li>
-                <a href="#paginaLey431" class="ui-btn">¿Quieres saber más?</a>
+            <li data-icon="search">
+                <a href="#paginaLey431">¿Quieres saber más?</a>
             </li>
-            <li>
-                <a href="#" class="ui-btn">Info. Contacto</a>
+            <li data-icon="info" data-iconpos="left">
+                <a href="#">Info. Contacto</a>
             </li>
         </ul>
 
@@ -1152,7 +1156,6 @@ animal.</h1></b></center>
             }
         }
     </script>
-
 </body>
 
 </html>

@@ -6,22 +6,20 @@ function PreguntasCotroller($scope, $http)
 
     total = 0;
 
-    $scope.Respuesta0 = function() {
+    $scope.Respuesta = function(id) {
         total = total + parseInt(1);
-        $('#Pregunta0').fadeOut(500, function(){ $(this).remove();
-            $('#Pregunta1').fadeIn();
-            $('#Pregunta1').addClass('slideInRight');
+        var targetFirst = '#Pregunta' + id;
+        $(targetFirst).fadeOut(0, function(){ $(this).remove();
+            var targetNext = '#Pregunta' + (parseInt(id) + 1);
+            //console.log(targetNext);
+            if (targetNext != '#Pregunta37')
+            {
+                $(targetNext).fadeIn();
+                $(targetNext).addClass('slideInRight');
+            }
         });
 
     };
 
-    $scope.Respuesta1 = function() {
-        total = total + parseInt(1);
-        $('#Pregunta1').fadeOut(500, function(){ $(this).remove();
-            $('#Pregunta2').fadeIn();
-            $('#Pregunta2').addClass('slideInRight');
-        });
-
-    };
 }
 app.controller('PreguntasCotroller', PreguntasCotroller);
