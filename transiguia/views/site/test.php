@@ -19,7 +19,7 @@ $preguntas = Json::encode(PreguntaRespuestaCompleta::find()->asArray()->all());
         <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
         <br>
         <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Respuesta(0)">{{preguntas[0].Respuesta}}</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
+        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Siguiente(0)">Boleta de infracción</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
     </div>
