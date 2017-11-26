@@ -43,6 +43,7 @@ if (Yii::$app->controller->action->id === 'login') {
         <script type="text/javascript" src="../../JavaScript/main.js"></script>
         <script type="text/javascript" src="../../JavaScript/alertify.js"></script>
         <script type="text/javascript" src="../../JavaScript/alertify.min.js"></script>
+        <script type="text/javascript" src="../../JavaScript/canvasjs.min.js"></script>
         <link rel="stylesheet" href="../../JavaScript/css/themes/bootstrap.min.css">
         <?php $this->head() ?>
     </head>
