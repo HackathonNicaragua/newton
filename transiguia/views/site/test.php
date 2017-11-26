@@ -357,4 +357,6 @@ $preguntas = Json::encode(PreguntaRespuestaCompleta::find()->asArray()->all());
         <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
     </div>
 
+    <br>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 </div>
