@@ -9,7 +9,7 @@
     <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <script src="js/cordova.js"></script>
+    <!--    <script src="js/cordova.js"></script>-->
 
     <script>
         //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
@@ -106,16 +106,16 @@
         <ul data-role="listview">
             <img src="img/logo.png" id="logopanel">
             <li data-icon="home">
-                <a href="#paginaPrincipal">Inicio</a>
+                <a href="#paginaPrincipal" onclick="ponerHeaderDefault()">Inicio</a>
             </li>
             <li data-icon="star">
-                <a href="#paginaTest">¡Consigue tu licencia!</a>
+                <a href="#paginaTest" onclick="ponerHeaderDefault()">¡Consigue tu licencia!</a>
             </li>
             <li data-icon="plus">
-                <a href="#paginaCalc">Calculadora Multas</a>
+                <a href="#paginaCalc" onclick="ponerHeaderDefault()">Calculadora Multas</a>
             </li>
             <li data-icon="search">
-                <a href="#paginaLey431">¿Quieres saber más?</a>
+                <a href="#paginaLey431" onclick="ponerHeaderDefault()">¿Quieres saber más?</a>
             </li>
             <li data-icon="info" data-iconpos="left">
                 <a href="#">Info. Contacto</a>
@@ -732,37 +732,34 @@
     <div data-role="page" id="paginaLey431">
         <div data-role="main" class="ui-content">
             <center>
-                <p><b>Aqui puedes encontrar todos los articulos de la ley 431 con sus respectivos incisos, aqui puedes buscar por numero de articulo</b></p>
-            </center>
-            <center>
-                <p><b>Busca por número de artículo:</b></p>
+                <p><b>Aqui puedes encontrar todos los articulos de la ley 431 con sus respectivos incisos</b></p>
             </center>
             <center>
                 <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Busca por # de artículo..." data-inset="true
                 ">
-                    <li><a href="#art1">Artículo 1</a></li>
-                    <li><a href="#art2">Artículo 2</a></li>
-                    <li><a href="#art3">Artículo 3</a></li>
-                    <li><a href="#art4">Artículo 4</a></li>
-                    <li><a href="#art5">Artículo 5</a></li>
-                    <li><a href="#art6">Artículo 6</a></li>
-                    <li><a href="#art7">Artículo 7</a></li>
-                    <li><a href="#art8">Artículo 8</a></li>
-                    <li><a href="#art9">Artículo 9</a></li>
-                    <li><a href="#art10">Artículo 10</a></li>
-                    <li><a href="#art11">Artículo 11</a></li>
-                    <li><a href="#art12">Artículo 12</a></li>
-                    <li><a href="#art13">Artículo 13</a></li>
-                    <li><a href="#art14">Artículo 14</a></li>
-                    <li><a href="#art15">Artículo 15</a></li>
-                    <li><a href="#art16">Artículo 16</a></li>
-                    <li><a href="#art17">Artículo 17</a></li>
-                    <li><a href="#art18">Artículo 18</a></li>
-                    <li><a href="#art19">Artículo 19</a></li>
-                    <li><a href="#art20">Artículo 20</a></li>
-                    <li><a href="#art21">Artículo 21</a></li>
-                    <li><a href="#art22">Artículo 22</a></li>
-                    <li><a href="#art23">Artículo 23</a></li>
+                    <li><a href="#art1">Artículo 1: Objeto de la ley.</a></li>
+                    <li><a href="#art2">Artículo 2: Autoridad de aplicación.</a></li>
+                    <li><a href="#art3">Artículo 3: Conceptos básicos.</a></li>
+                    <li><a href="#art4">Artículo 4: Derecho de matrícula como especie fiscal.</a></li>
+                    <li><a href="#art5">Artículo 5: Creación de especies fiscales.</a></li>
+                    <li><a href="#art6">Artículo 6: Requisitos y procedimientos.</a></li>
+                    <li><a href="#art7">Artículo 7: Coordinaciones.</a></li>
+                    <li><a href="#art8">Artículo 8: Pago de arancel de derecho de matrícula, placas, licencia de circulación y calcomanías.</a></li>
+                    <li><a href="#art9">Artículo 9: Vigencia y renovación de especies fiscales.</a></li>
+                    <li><a href="#art10">Artículo 10: Pago de derechos y tasas en ventanilla única.</a></li>
+                    <li><a href="#art11">Artículo 11: Creación del impuesto municipal de rodamiento.</a></li>
+                    <li><a href="#art12">Artículo 12: Pago del impuesto de rodamiento.</a></li>
+                    <li><a href="#art13">Artículo 13: Exención de pago de derechos o tasas.</a></li>
+                    <li><a href="#art14">Artículo 14: Trámites de obtención del derecho de matrícula o renovación.</a></li>
+                    <li><a href="#art15">Artículo 15: Calcomanías para placas mayores y menores.</a></li>
+                    <li><a href="#art16">Artículo 16: Valor de la calcomanía del derecho de matrícula.</a></li>
+                    <li><a href="#art17">Artículo 17: Requisitos para la renovación de matrícula.</a></li>
+                    <li><a href="#art18">Artículo 18: Infracciones y sus acumulaciones.</a></li>
+                    <li><a href="#art19">Artículo 19: Diseño de boletas de infracciones.</a></li>
+                    <li><a href="#art20">Artículo 20: Obligación del Agente de Tránsito.</a></li>
+                    <li><a href="#art21">Artículo 21: Responsabilidad por daños.</a></li>
+                    <li><a href="#art22">Artículo 22: Señales lumínicas para medios de transporte automotores, de pedal y de tracción animal.</a></li>
+                    <li><a href="#art23">Artículo 23: Precauciones necesarias y uso de luces.</a></li>
                     <!--
                     <li><a href="#art24">Artículo 24</a></li>
                     <li><a href="#art25">Artículo 25</a></li>
@@ -1261,7 +1258,9 @@ animal.</h1></b></center>
     <!-- Aqui empieza la pagina de la calculadora de multas-->
     <div data-role="page" id="paginaCalc">
         <div data-role="main" class="ui-content">
-            <center><p id="textoCalc" style="font-weight: bold">Tu total es: C$ 0</p></center>
+            <center>
+                <p id="textoCalc" style="font-weight: bold">Tu total es: C$ 0</p>
+            </center>
             <br>
             <a class="ui-btn ui-corner-all" href="#" onclick="ponerCalc0()">Reiniciar</a>
             <br>
@@ -1749,22 +1748,21 @@ animal.</h1></b></center>
             }
         }
     </script>
-    
+
     <script>
         var totalMulta = 0;
-        
+
         function sumarMulta(precio) {
             totalMulta = totalMulta + precio;
             document.getElementById("textoCalc").innerHTML = "Tu total es C$ " + totalMulta;
         }
-        
+
         function ponerCalc0() {
             totalMulta = 0;
             document.getElementById("textoCalc").innerHTML = "Tu total es C$ " + totalMulta;
         }
-        
     </script>
-    
+
     <script>
         document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -1889,6 +1887,24 @@ animal.</h1></b></center>
             } else if ($.mobile.activePage.attr('id') == 'pregunta37') {
                 $.mobile.changePage("#paginaTest");
                 ponerHeaderDefault();
+            } else if ($.mobile.activePage.attr('id') == 'paginaTest') {
+                if (confirm("¿Estas seguro que quieres salir?")) {
+                    navigator.app.exitApp();
+                } else {
+                    return false;
+                }
+            } else if ($.mobile.activePage.attr('id') == 'paginaCalc') {
+                if (confirm("¿Estas seguro que quieres salir?")) {
+                    navigator.app.exitApp();
+                } else {
+                    return false;
+                }
+            } else if ($.mobile.activePage.attr('id') == 'paginaLey431') {
+                if (confirm("¿Estas seguro que quieres salir?")) {
+                    navigator.app.exitApp();
+                } else {
+                    return false;
+                }
             }
         }
     </script>
