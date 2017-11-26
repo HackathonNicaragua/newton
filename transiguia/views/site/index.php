@@ -13,7 +13,7 @@ use yii\helpers\Html;
         <h1>Bienvenido a <span class="">TransiGuía</span> WEB</h1>
         <p>Grandiosa guía para antes de tomar el examen teórico y práctico de conducir en Nicaragua.</p>
 
-        <a class='btn btn-danger' href='https://play.google.com/store/apps/details?id=com.app.permisodeconducir&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><i class="fa fa-download fa-2x" aria-hidden="true"></i></a>
+        <a class='btn btn-danger' href=<?php echo Yii::$app->homeUrl."./files/TransiGuiaMovil.apk" ?>><i class="fa fa-download fa-2x" aria-hidden="true"></i></a>
         <?php
         //echo Html::a('Descarga la APP móvil', ['/site/login'], ['class'=>'btn btn-primary']);
         ?>
