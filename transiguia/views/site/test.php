@@ -16,56 +16,30 @@ $preguntas = Json::encode(PreguntaRespuestaCompleta::find()->asArray()->all());
     <span ng-init='preguntas = <?php echo $preguntas;?>'></span>
 
     <div id="Pregunta0" class="animated slideInRight">
-        <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
+        <div class="center"><b><h3>{{preguntas[0].Pregunta}} 0</b></h3></div>
         <br>
-        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="EsCorrecta()">{{preguntas[0].Respuesta}}</button>
+        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Respuesta0()">{{preguntas[0].Respuesta}}</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
     </div>
 
-    <div id="Pregunta1" class="animated slideInRight">
-        <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
+    <div id="Pregunta1" style="display: none">
+        <div class="center"><b><h3>{{preguntas[0].Pregunta}} 1</b></h3></div>
         <br>
-        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="EsCorrecta()">{{preguntas[0].Respuesta}}</button>
+        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Respuesta1()">{{preguntas[0].Respuesta}}</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
     </div>
 
-    <div id="Pregunta2" class="animated slideInRight">
-        <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
+    <div id="Pregunta2" style="display: none">
+        <div class="center"><b><h3>{{preguntas[0].Pregunta}} 2</b></h3></div>
         <br>
-        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="EsCorrecta()">{{preguntas[0].Respuesta}}</button>
+        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Respuesta2()">{{preguntas[0].Respuesta}}</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
         <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
     </div>
 
-    <div id="Pregunta3" class="animated slideInRight">
-        <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
-        <br>
-        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="EsCorrecta()">{{preguntas[0].Respuesta}}</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
-    </div>
-
-    <div id="Pregunta4" class="animated slideInRight">
-        <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
-        <br>
-        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="EsCorrecta()">{{preguntas[0].Respuesta}}</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
-    </div>
-
-    <div id="Pregunta5" class="animated slideInRight">
-        <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
-        <br>
-        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="EsCorrecta()">{{preguntas[0].Respuesta}}</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Boleta de infracción</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Conducción temeraria</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
-    </div>
 </div>
