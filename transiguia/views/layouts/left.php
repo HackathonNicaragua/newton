@@ -31,8 +31,11 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Ley 431', 'icon' => 'dashboard', 'url' => ['site/index']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
+                    ['label' => 'Inicio', 'icon' => 'home', 'url' => ['site/index']],
+                    ['label' => '¿Conseguiras tu licencia?', 'icon' => 'fa fa-id-card', 'url' => ['site/index']],
+                    ['label' => '¿Quieres saber más?', 'icon' => 'question-circle', 'url' => ['/debug']],
+                    ['label' => 'Calculadora de multas', 'icon' => 'calculator', 'url' => ['/debug']],
+                    ['label' => 'Te puede interesar', 'icon' => 'hand-peace-o', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => 'TransiGuia',
@@ -40,7 +43,7 @@
                         'url' => '#',
                         'items' => [
                             ['label' => 'Señalización', 'icon' => 'warning', 'url' => ['site/seniales'],],
-                            ['label' => 'Ley 431', 'icon' => 'dashboard', 'url' => ['/debug'],],
+                            ['label' => '¡Consigue tu licencia!', 'icon' => 'dashboard', 'url' => ['/debug'],],
                             /*[
                                 'label' => 'Level One',
                                 'icon' => 'circle-o',
