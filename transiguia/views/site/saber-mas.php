@@ -28,7 +28,7 @@ $data = ArrayHelper::map(ArticuloDescripcion::find()->asArray()->all(), 'Id', 'A
                     'name' => 'Descripcion',
                     'value' => 'Descripcion',
                     'data' => $data,
-                    'options' => ['multiple' => false, 'placeholder' => 'Describa la infraccion','id'=>'Descripcion']
+                    'options' => ['multiple' => false, 'placeholder' => 'Ingrese alguna palabra clave','id'=>'Descripcion']
                 ]);
                 ?>
             </td>
