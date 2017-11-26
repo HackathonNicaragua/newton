@@ -75,18 +75,18 @@ $config = [
 
     ],
     'params' => $params,
-    'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-            'user/*',
-            'site/index',
-            'site/about',
-            'site/contact',
-            'site/captcha',
-            'site/logout',
-            'site/login',
-        ]
-    ]
+    // 'as access' => [
+    //     'class' => 'mdm\admin\components\AccessControl',
+    //     'allowActions' => [
+    //         'user/*',
+    //         'site/index',
+    //         'site/about',
+    //         'site/contact',
+    //         'site/captcha',
+    //         'site/logout',
+    //         'site/login',
+    //     ]
+    // ]
 ];
 
 if (YII_ENV_DEV) {
