@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-11-25 12:44:24
+Date: 2017-11-26 01:09:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,12 +27,15 @@ CREATE TABLE `articulo` (
   PRIMARY KEY (`Id`),
   KEY `IdCategoria` (`IdCategoria`),
   CONSTRAINT `IdCategoria` FOREIGN KEY (`IdCategoria`) REFERENCES `categoria` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of articulo
 -- ----------------------------
-INSERT INTO `articulo` VALUES ('1', 'Diccionario', null, null);
+INSERT INTO `articulo` VALUES ('2', 'Arto. 3 Conceptos básicos', null, null);
+INSERT INTO `articulo` VALUES ('3', 'Arto. 26 -Valor de las multas por infracciones de trásito', null, null);
+INSERT INTO `articulo` VALUES ('4', 'Señales Preventivas', null, null);
+INSERT INTO `articulo` VALUES ('5', 'Señales Reglamentarias', null, null);
 
 -- ----------------------------
 -- Table structure for `auth_assignment`
@@ -228,9 +231,7 @@ DROP TABLE IF EXISTS `categoria`;
 CREATE TABLE `categoria` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Descripcion` varchar(255) DEFAULT NULL,
-  `IdUsuario` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Id`),
-  KEY `IdUsuario_FK` (`IdUsuario`)
+  PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -287,6 +288,21 @@ INSERT INTO `migration` VALUES ('m151218_234654_add_timezone_to_profile', '15022
 INSERT INTO `migration` VALUES ('m160312_050000_create_user', '1502240994');
 
 -- ----------------------------
+-- Table structure for `multa`
+-- ----------------------------
+DROP TABLE IF EXISTS `multa`;
+CREATE TABLE `multa` (
+  `Id` int(11) NOT NULL AUTO_INCREMENT,
+  `Descripcion` varchar(255) DEFAULT NULL,
+  `Precio` float DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of multa
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `pregunta`
 -- ----------------------------
 DROP TABLE IF EXISTS `pregunta`;
@@ -297,12 +313,47 @@ CREATE TABLE `pregunta` (
   PRIMARY KEY (`Id`),
   KEY `IdArticulo_P` (`IdArticulo`),
   CONSTRAINT `IdArticulo_P` FOREIGN KEY (`IdArticulo`) REFERENCES `articulo` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of pregunta
 -- ----------------------------
-INSERT INTO `pregunta` VALUES ('1', 'Cuales son las señales', null);
+INSERT INTO `pregunta` VALUES ('2', 'Acción u omisión culposa cometida por cualquier conductor, pasajero o peatón en la vía pública o privada causando daños materiales, lesiones o muerte de personas, donde interviene por los menos un vehículo en movimiento', '2');
+INSERT INTO `pregunta` VALUES ('3', 'Acción y efecto de aventajar un vehículo a otro sobre la marcha', '2');
+INSERT INTO `pregunta` VALUES ('4', 'Es la parte superior de la vía pública destinada únicamente para la circulación peatonal', '2');
+INSERT INTO `pregunta` VALUES ('5', ' Franja longitudinal afirmada contiguo a la calzada, que no está destinada al uso de vehículos automotores, salvo circunstancias excepcionales', '2');
+INSERT INTO `pregunta` VALUES ('6', 'Es el área máxima de visión que debe de tener todo conductor al desplazarse sobre la vía', '2');
+INSERT INTO `pregunta` VALUES ('7', ' Es el área de la vía destinada únicamente para la circulación de vehículos automotor, de pedal o de tracción animal', '2');
+INSERT INTO `pregunta` VALUES ('8', 'Operación de vehículos con manifiesto desprecio por la vida, con notoria y deliberada transgresión a las normas de tránsito, poniendo en peligro concreto la vida o integridad física de las personas y sus bienes', '2');
+INSERT INTO `pregunta` VALUES ('9', 'Área destinada para la circulación vehicular, sin que esta tenga trazo alguno que determine su dirección.', '2');
+INSERT INTO `pregunta` VALUES ('10', 'Banda longitudinal en que puede estar subdividida la calzada, delimitada o no por marcas viales longitudinales, siempre que tenga una anchura determinada y suficiente para permitir la circulación de una fila de automóviles que no sean motocicletas', '2');
+INSERT INTO `pregunta` VALUES ('11', 'Conjunto de factores o condiciones climáticas que dificultan la visibilidad del conductor, tales como neblina, lluvia, polvo, humo, entre otros', '2');
+INSERT INTO `pregunta` VALUES ('12', 'Persona natural que conduce un vehículo del tipo para el que está autorizado, de conformidad a la licencia de conducir', '2');
+INSERT INTO `pregunta` VALUES ('13', 'Conjunto de señales que regulan el ordenamiento vial', '2');
+INSERT INTO `pregunta` VALUES ('14', 'Área especial fuera de la vía destinada exclusivamente para el parqueo de los vehículos automotores', '2');
+INSERT INTO `pregunta` VALUES ('15', 'Proceso mecánico a través del cual se establece el estado mecánico de cualquier vehículo', '2');
+INSERT INTO `pregunta` VALUES ('16', 'Punto de convergencia de dos o más vías públicas o privadas para su unión o cruce entre sí', '2');
+INSERT INTO `pregunta` VALUES ('17', 'Es el lugar determinado para la inmovilización de cualquier vehículo, fuera de la vía, durante un tiempo inferior a los cinco minutos, sea para bajar o subir pasajeros o carga, bajo la presencia del conductor, con las señales de tránsito requeridas', '2');
+INSERT INTO `pregunta` VALUES ('18', 'Es el área señalada y destinada para el paso exclusivo de peatones', '2');
+INSERT INTO `pregunta` VALUES ('19', 'Es el punto en que dos vías se interceptan entre sí, una por encima de la otra para que la circulación vehicular se realice a diferentes niveles de la superficie y en distintas direcciones', '3');
+INSERT INTO `pregunta` VALUES ('20', 'Conducir en estado de embriaguez extrema: concentración superior a 2 gramos de alcohol por litro de sangre', '3');
+INSERT INTO `pregunta` VALUES ('21', 'Conducir en estado de embriaguez: concentración de más de 1 gramo hasta 2 gramos de alcohol por litro de sangre', '3');
+INSERT INTO `pregunta` VALUES ('22', 'Conducir de forma temeraria', '3');
+INSERT INTO `pregunta` VALUES ('23', 'Provocar accidente y darse a la fuga', '3');
+INSERT INTO `pregunta` VALUES ('24', 'Estacionar en carretera, trailers, rastras y contenedores sin triángulos reflectivos u otras señales lumínicas adecuadas para la prevención de accidentes', '3');
+INSERT INTO `pregunta` VALUES ('25', 'Usar placas y/o circulación de otro vehículo', '3');
+INSERT INTO `pregunta` VALUES ('26', 'Invasión de carril', '3');
+INSERT INTO `pregunta` VALUES ('27', 'Participar en competencias ilegales de automotores', '3');
+INSERT INTO `pregunta` VALUES ('28', 'Conducir sin tener licencia de conducir', '3');
+INSERT INTO `pregunta` VALUES ('29', 'No respetar la preferencia peatonal en las intersecciones o los cruces de colegios', '3');
+INSERT INTO `pregunta` VALUES ('30', 'Exceso de pasajeros o de carga', '3');
+INSERT INTO `pregunta` VALUES ('31', 'Aventajar en pendientes, curvas o puentes', '3');
+INSERT INTO `pregunta` VALUES ('32', 'El conductor y acompañantes de un vehículo automotor, que no utilice el cinturón de seguridad', '3');
+INSERT INTO `pregunta` VALUES ('33', 'Desatender señales de emergencia, lumínicas, sonoras de ambulancias, policía o bomberos', '3');
+INSERT INTO `pregunta` VALUES ('34', 'Obstrucción de la libre circulación vehicular', '3');
+INSERT INTO `pregunta` VALUES ('35', 'Conducir motocicletas con niños menores de 8 años', '3');
+INSERT INTO `pregunta` VALUES ('36', 'Estacionarse en la vía pública, en caso de emergencia, sin triángulos reflectivos u otras señales lumínicas adecuadas para la prevención de accidentes', '3');
+INSERT INTO `pregunta` VALUES ('37', 'No reportar los cambios de las características físicas del vehículo', '3');
 
 -- ----------------------------
 -- Table structure for `pregunta_respuesta`
@@ -318,11 +369,12 @@ CREATE TABLE `pregunta_respuesta` (
   KEY `IdRespuesta_R` (`IdRespuesta`),
   CONSTRAINT `IdPregunta_R` FOREIGN KEY (`IdPregunta`) REFERENCES `pregunta` (`Id`),
   CONSTRAINT `IdRespuesta_R` FOREIGN KEY (`IdRespuesta`) REFERENCES `respuesta` (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of pregunta_respuesta
 -- ----------------------------
+INSERT INTO `pregunta_respuesta` VALUES ('1', '2', '3', '1');
 
 -- ----------------------------
 -- Table structure for `pregunta_usuario`
@@ -380,16 +432,51 @@ DROP TABLE IF EXISTS `respuesta`;
 CREATE TABLE `respuesta` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `IdPregunta` int(11) DEFAULT NULL,
-  `Respuesta` varchar(11) DEFAULT NULL,
+  `Respuesta` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `IdPregunta_R` (`IdPregunta`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of respuesta
 -- ----------------------------
-INSERT INTO `respuesta` VALUES ('1', '1', 'Verdadera');
-INSERT INTO `respuesta` VALUES ('2', '1', 'Falsa');
+INSERT INTO `respuesta` VALUES ('3', '2', 'Accidente de tránsito');
+INSERT INTO `respuesta` VALUES ('4', '3', 'Aventajamiento');
+INSERT INTO `respuesta` VALUES ('5', '4', 'Acera o anden');
+INSERT INTO `respuesta` VALUES ('6', '5', 'Arcén');
+INSERT INTO `respuesta` VALUES ('7', '6', 'Ángulo de visibilidad');
+INSERT INTO `respuesta` VALUES ('8', '7', 'Calzada');
+INSERT INTO `respuesta` VALUES ('9', '8', 'Conducción temeraria ');
+INSERT INTO `respuesta` VALUES ('10', '9', ' Caminos');
+INSERT INTO `respuesta` VALUES ('11', '10', 'Carril');
+INSERT INTO `respuesta` VALUES ('12', '11', 'Condiciones atmosféricas');
+INSERT INTO `respuesta` VALUES ('13', '12', ' Conductor');
+INSERT INTO `respuesta` VALUES ('14', '13', 'Dispositivos de tránsito');
+INSERT INTO `respuesta` VALUES ('15', '14', ' Estacionamiento');
+INSERT INTO `respuesta` VALUES ('16', '15', 'Inspección mecánica de vehículos');
+INSERT INTO `respuesta` VALUES ('17', '16', 'Intersección');
+INSERT INTO `respuesta` VALUES ('18', '17', 'Parada');
+INSERT INTO `respuesta` VALUES ('19', '18', ' Paso peatonal');
+INSERT INTO `respuesta` VALUES ('20', '19', ' Paso a desnivel');
+INSERT INTO `respuesta` VALUES ('21', '21', '5000');
+INSERT INTO `respuesta` VALUES ('22', '21', '4000');
+INSERT INTO `respuesta` VALUES ('23', '22', '3000');
+INSERT INTO `respuesta` VALUES ('24', '23', '2500');
+INSERT INTO `respuesta` VALUES ('25', '24', '1000');
+INSERT INTO `respuesta` VALUES ('26', '25', '1000');
+INSERT INTO `respuesta` VALUES ('27', '26', '800');
+INSERT INTO `respuesta` VALUES ('28', '27', '1000');
+INSERT INTO `respuesta` VALUES ('29', '28', '500');
+INSERT INTO `respuesta` VALUES ('30', '29', '650');
+INSERT INTO `respuesta` VALUES ('31', '29', '500');
+INSERT INTO `respuesta` VALUES ('32', '30', '500');
+INSERT INTO `respuesta` VALUES ('33', '31', '500');
+INSERT INTO `respuesta` VALUES ('34', '32', '350');
+INSERT INTO `respuesta` VALUES ('35', '33', '350');
+INSERT INTO `respuesta` VALUES ('36', '34', '500');
+INSERT INTO `respuesta` VALUES ('37', '35', '200');
+INSERT INTO `respuesta` VALUES ('38', '36', '350');
+INSERT INTO `respuesta` VALUES ('39', '37', '500');
 
 -- ----------------------------
 -- Table structure for `social_account`
@@ -484,3 +571,9 @@ CREATE TABLE `usuario_categoria` (
 -- ----------------------------
 -- Records of usuario_categoria
 -- ----------------------------
+
+-- ----------------------------
+-- View structure for `pregunta_respuesta_completa`
+-- ----------------------------
+DROP VIEW IF EXISTS `pregunta_respuesta_completa`;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pregunta_respuesta_completa` AS select `pregunta_respuesta`.`Id` AS `Id`,`pregunta`.`Pregunta` AS `Pregunta`,`respuesta`.`Respuesta` AS `Respuesta`,`pregunta_respuesta`.`Puntaje` AS `Puntaje` from ((`pregunta_respuesta` join `respuesta`) join `pregunta`) where ((`pregunta_respuesta`.`IdPregunta` = `pregunta`.`Id`) and (`pregunta_respuesta`.`IdRespuesta` = `respuesta`.`Id`)) ;
