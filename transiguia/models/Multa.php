@@ -27,8 +27,6 @@ class Multa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Id'], 'required'],
-            [['Id'], 'integer'],
             [['Precio'], 'number'],
             [['Descripcion'], 'string', 'max' => 255],
         ];
