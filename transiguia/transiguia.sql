@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50718
 File Encoding         : 65001
 
-Date: 2017-11-26 01:09:37
+Date: 2017-11-26 05:08:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -296,11 +296,12 @@ CREATE TABLE `multa` (
   `Descripcion` varchar(255) DEFAULT NULL,
   `Precio` float DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of multa
 -- ----------------------------
+INSERT INTO `multa` VALUES ('1', 'Conducir en estado de ebriedad', '1500');
 
 -- ----------------------------
 -- Table structure for `pregunta`
@@ -369,12 +370,48 @@ CREATE TABLE `pregunta_respuesta` (
   KEY `IdRespuesta_R` (`IdRespuesta`),
   CONSTRAINT `IdPregunta_R` FOREIGN KEY (`IdPregunta`) REFERENCES `pregunta` (`Id`),
   CONSTRAINT `IdRespuesta_R` FOREIGN KEY (`IdRespuesta`) REFERENCES `respuesta` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of pregunta_respuesta
 -- ----------------------------
 INSERT INTO `pregunta_respuesta` VALUES ('1', '2', '3', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('2', '3', '4', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('3', '4', '5', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('4', '5', '6', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('5', '6', '7', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('6', '7', '8', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('7', '8', '9', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('8', '8', '9', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('9', '9', '10', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('10', '10', '11', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('11', '11', '12', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('12', '12', '13', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('13', '13', '14', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('14', '14', '15', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('15', '15', '16', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('16', '16', '17', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('17', '17', '18', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('18', '18', '19', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('19', '19', '20', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('20', '20', '21', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('21', '21', '22', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('22', '22', '23', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('23', '23', '24', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('24', '24', '25', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('25', '25', '26', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('26', '26', '27', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('27', '27', '28', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('28', '28', '29', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('29', '29', '30', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('30', '30', '31', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('31', '31', '32', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('32', '32', '33', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('33', '33', '34', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('34', '34', '35', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('35', '35', '37', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('36', '36', '38', '1');
+INSERT INTO `pregunta_respuesta` VALUES ('37', '37', '39', '1');
 
 -- ----------------------------
 -- Table structure for `pregunta_usuario`

@@ -67,4 +67,11 @@ function PreguntasCotroller($scope, $http)
     };
 
 }
+
+function CalculadoraController($scope, $http)
+{
+    
+}
+
 app.controller('PreguntasCotroller', PreguntasCotroller);
+app.controller('CalculadoraController', CalculadoraController);
