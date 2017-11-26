@@ -31,17 +31,17 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
+                    ['label' => 'Ley 431', 'icon' => 'dashboard', 'url' => ['site/index']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
-                        'label' => 'Same tools',
-                        'icon' => 'share',
+                        'label' => 'TransiGuia',
+                        'icon' => 'car',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-                            ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
-                            [
+                            ['label' => 'Señalización', 'icon' => 'warning', 'url' => ['site/seniales'],],
+                            ['label' => 'Ley 431', 'icon' => 'dashboard', 'url' => ['/debug'],],
+                            /*[
                                 'label' => 'Level One',
                                 'icon' => 'circle-o',
                                 'url' => '#',
@@ -57,7 +57,7 @@
                                         ],
                                     ],
                                 ],
-                            ],
+                            ],*/
                         ],
                     ],
                 ],
