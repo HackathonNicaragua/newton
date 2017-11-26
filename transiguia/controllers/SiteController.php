@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Pregunta;
 
 class SiteController extends Controller
 {
@@ -64,14 +65,24 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function  actionSeniales()
+    public function  actionTest()
     {
-        return $this->render('seniales');
+        return $this->render('test');
     }
 
-    public function actionInformativas()
+    public function actionSaberMas()
     {
-        return $this->render('informativas');
+        return $this->render('saber-mas');
+    }
+
+    public function actionCalculadora()
+    {
+        return $this->render('calculadora');
+    }
+
+    public function actionInteres()
+    {
+        return $this->render('interes');
     }
 
     /**
