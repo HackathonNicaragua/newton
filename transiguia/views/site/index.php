@@ -11,12 +11,15 @@ use yii\helpers\Html;
 
     <div class="jumbotron">
         <h1>Bienvenido a <span class="">TransiGuía</span> WEB</h1>
-        <p>Tnte. Grethel Vargas Espinoza El número de accidentes de tránsito en las diferentes vías del país aumentaron esta semana, con un total de 832 haciendo una diferencia de 82 accidentes…</p>
+        <p>Grandiosa guía para antes de tomar el examen teórico y práctico de conducir en Nicaragua.</p>
+
+        <a class='btn btn-danger' href='https://play.google.com/store/apps/details?id=com.app.permisodeconducir&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><i class="fa fa-download fa-2x" aria-hidden="true"></i></a>
         <?php
-        echo Html::a('Descarga la APP móvil', ['/site/login'], ['class'=>'btn btn-primary']);
+        //echo Html::a('Descarga la APP móvil', ['/site/login'], ['class'=>'btn btn-primary']);
         ?>
         <center>
           <a href='https://play.google.com/store/apps/details?id=com.app.permisodeconducir&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="200px" class="img img-responsive" alt='Disponible en Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/es-419_badge_web_generic.png'/></a>
+          <iframe src="https://www.facebook.com/plugins/follow.php?href=https%3A%2F%2Fwww.facebook.com%2FTransiguia-391799507918219%2F&width=200&height=80&layout=standard&size=large&show_faces=true&appId" width="200" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
         </center>
     </div>
 
