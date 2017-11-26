@@ -9,7 +9,7 @@
     <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <!--    <script src="js/cordova.js"></script>-->
+<!--    <script src="js/cordova.js"></script>-->
 
     <script>
         //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
@@ -95,6 +95,11 @@
             border-radius: 15px;
             border-color: #d9d9d9;
         }
+
+        .señal {
+            display: inline-block;
+            width: 35%;
+        }
     </style>
     <title>TransiGuía Móvil</title>
 </head>
@@ -117,8 +122,11 @@
             <li data-icon="search">
                 <a href="#paginaLey431" onclick="ponerHeaderDefault()">¿Quieres saber más?</a>
             </li>
+            <li data-icon="search">
+                <a href="#paginaSeñales" onclick="ponerHeaderDefault()">Aprende de señales</a>
+            </li>
             <li data-icon="info" data-iconpos="left">
-                <a href="#">Info. Contacto</a>
+                <a href="#paginaContacto" onclick="ponerHeaderDefault()">Info. Contacto</a>
             </li>
         </ul>
 
@@ -1558,6 +1566,63 @@ animal.</h1></b></center>
         </div>
     </div>
 
+    <!-- Aqui EMPIEZA LA PAGINA DE SEÑALES -->
+    <div data-role="page" id="paginaSeñales">
+        <div data-role="main" class="ui-content">
+            <center>
+                <p><b>Aqui puedes encontrar información de las señales de transito mas importantes.</b></p>
+                <p><b>Es recomendable poner el telefono en modo panorama.</b></p>
+            </center>
+            <br><br>
+            <center><p><b>Señales informáticas</b></p></center>
+            <hr>
+            <center>
+                <div>
+                    <img src="img/info1.jpg" class="señal">
+                    <img src="img/info2.jpg" class="señal">
+                    <img src="img/info3.jpg" class="señal">
+                    <img src="img/info4.jpg" class="señal">
+                    <img src="img/info5.jpg" class="señal">
+                    <img src="img/info6.jpg" class="señal">
+                </div>
+            </center>
+
+            <br><br>
+            <center><p><b>Señales Preventivas</b></p></center>
+            <hr>
+            <center>
+                <div>
+                    <img src="img/prev1.jpg" class="señal">
+                    <img src="img/prev2.jpg" class="señal">
+                    <img src="img/prev3.jpg" class="señal">
+                    <img src="img/prev4.jpg" class="señal">
+                    <img src="img/prev5.jpg" class="señal">
+                    <img src="img/prev6.jpg" class="señal">
+                    <img src="img/prev7.jpg" class="señal">
+                    <img src="img/prev8.jpg" class="señal">
+                    <img src="img/prev9.jpg" class="señal">
+                    <img src="img/prev10.jpg" class="señal">
+                </div>
+            </center>
+            
+            <br><br>
+            <center><p><b>Señales Reglamentales</b></p></center>
+            <hr>
+            <center>
+                <div>
+                    <img src="img/reg1.jpg" class="señal">
+                    <img src="img/reg2.jpg" class="señal">
+                    <img src="img/reg3.jpg" class="señal">
+                    <img src="img/reg4.jpg" class="señal">
+                    <img src="img/reg5.jpg" class="señal">
+                    <img src="img/reg6.jpg" class="señal">
+                    <img src="img/reg7.jpg" class="señal">
+                    <img src="img/reg8.jpg" class="señal">
+                    <img src="img/reg9.jpg" class="señal">
+                </div>
+            </center>
+        </div>
+    </div>
     <script>
         function loadPageLey() {
             $.mobile.changePage("#paginaLey431");
@@ -1577,18 +1642,10 @@ animal.</h1></b></center>
         }
 
         function esFalso() {
-            puntaje = puntaje - 1;
             limite = limite + 1;
             document.getElementById("iconRespuesta").src = "img/wrongIcon.png";
             document.getElementById("textoAlerta").innerHTML = "Te equivocaste...";
             ponerHeaderPregunta();
-        }
-
-        function checkLimite() {
-            if (limite = 10) {
-                document.getElementById("buttonSiguiente").href = "#paginaTest";
-                document.getElementById("textoPuntaje").innerHTML = "TransiGuía Móvil";
-            }
         }
 
         function ponerTodo0() {
@@ -1722,29 +1779,18 @@ animal.</h1></b></center>
                 }
             } else if (limite = 10) {
                 if (puntaje < 8) {
-                    if (puntaje < 0) {
-                        puntaje = puntaje * -1;
-                        puntaje = 10 - puntaje;
                         document.getElementById("buttonSiguiente").href = "#paginaTest";
                         document.getElementById("buttonSiguiente").innerHTML = "Volver al menú principal";
                         document.getElementById("iconRespuesta").src = "img/wrongIcon.png";
                         document.getElementById("textoAlerta").innerHTML = "Tu porcentaje de acierto fue " + puntaje + "0% <br><br> ¡Estudia con nuestra guía!";
                         document.getElementById("textoPuntaje").innerHTML = "TransiGuía Móvil";
-                    } else {
-                        document.getElementById("buttonSiguiente").href = "#paginaTest";
-                        document.getElementById("buttonSiguiente").innerHTML = "Volver al menú principal";
-                        document.getElementById("iconRespuesta").src = "img/wrongIcon.png";
-                        document.getElementById("textoAlerta").innerHTML = "Tu porcentaje de acierto fue " + puntaje + "0% <br><br> ¡Estudia con nuestra guía!";
-                        document.getElementById("textoPuntaje").innerHTML = "TransiGuía Móvil";
-                    }
-
-                } else if (puntaje > 8) {
+                    } else if (puntaje > 8) {
                     document.getElementById("buttonSiguiente").href = "#paginaTest";
                     document.getElementById("buttonSiguiente").innerHTML = "Volver al menú principal";
                     document.getElementById("iconRespuesta").src = "img/correctIcon.png";
                     document.getElementById("textoAlerta").innerHTML = "Tu porcentaje de acierto fue " + puntaje + "0% <br><br> ¡Felicitaciones, eres un as de la carretera!";
                     document.getElementById("textoPuntaje").innerHTML = "TransiGuía Móvil";
-                }
+                    }
             }
         }
     </script>
