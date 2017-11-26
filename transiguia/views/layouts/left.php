@@ -5,7 +5,7 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src=<?php echo Yii::$app->homeUrl."images/LogoTransiGuiaWhite.png" ?> class="" style="max-width:100%" alt="User Image"/>
+                <img src=<?php echo Yii::$app->homeUrl."images/LogoTransiGuiaWhiteSM.png" ?> class="" style="max-width:100%" alt="User Image"/>
             </div>
             <div class="pull-left info">
 
