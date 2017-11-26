@@ -48,6 +48,13 @@
         #parrafoArto {
             text-align: justify;
         }
+        
+        #iconRespuesta {
+            display: block;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
     <title>TransiGuía Móvil</title>
 </head>
@@ -77,7 +84,7 @@
 
     </div>
     <!-- Aqui se crea el header que se utilizara para TODAS las pages -->
-    <div data-role="header">
+    <div data-role="header" id="textoPuntaje">
         <a href="#miPanel" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-bars" id="buttonMenu">Menú</a>
         <h1>TransiGuía Móvil</h1>
     </div>
@@ -94,7 +101,143 @@
             </center>
         </div>
     </div>
+    
+    <!-- Aqui se encuentra el test de preguntas y el alert que usan todas las preguntas-->
+    
+    <div data-role="page" id="paginaTest">
+        <div data-role="main" class="ui-content">
+            <center><p><b>¡Bienvenido al Test de preguntas de TransiGuía!</b></p></center>
+            <center><p>Prueba que eres un as del volante aprobando este test</p></center>
+            <center><a href="#pregunta1" class="ui-btn ui-corner-all ui-shadow" onclick="ponerPuntaje0(), ponerAlertaDefault(), cambiarPregunta()" id="buttonIniciar">Iniciar Test</a></center>
+        </div>
+    </div>
+    
+    <div data-role="page" data-dialog="true" data-transition="slidefade" id="alerta">
+        <div data-role="main" class="ui-content">
+            <center>
+                <img src="img/logo.png" id="iconRespuesta">
+                <p id="textoAlerta">Placeholder</p>
+            </center>
+            <center>
+                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" id="buttonSiguiente">Siguiente pregunta</a>
+            </center>
+        </div>
+    </div>
 
+    <!-- Aqui EMPIEZAN TODAS LAS PREGUNTAS-->
+    
+    <div data-role="page" id="pregunta1">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Acción u omisión culposa cometida por cualquier conductor, pasajero o peatón en la vía pública o privada causando daños materiales, lesiones o muerte de personas, donde interviene por los menos un vehículo en movimiento.</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esFalso(), cambiarPregunta()">Boleta de Infracción</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esCorrecto(), cambiarPregunta()">Accidente de tránsito</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Conducción temeraria</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <div data-role="page" id="pregunta2">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Acción y efecto de aventajar un vehículo a otro sobre la marcha.</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esFalso(), cambiarPregunta()">Estacionarse</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Patrullaje Motorizado</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esCorrecto(), cambiarPregunta()">Aventajamiento</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <div data-role="page" id="pregunta3">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Es la parte superior de la vía pública destinada únicamente para la circulación peatonal.</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esCorrecto(), cambiarPregunta()">Acera o anden</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Calzada</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Carril</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Estacionamiento</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <div data-role="page" id="pregunta4">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Franja longitudinal afirmada contiguo a la calzada, que no está destinada al uso de vehículos automotores, salvo circunstancias excepcionales</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esCorrecto(), cambiarPregunta()">Carril</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Perímetro Urbano</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Arcén</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Parada</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <div data-role="page" id="pregunta5">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Es el área máxima de visión que debe de tener todo conductor al desplazarse sobre la vía.</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esFalso(), cambiarPregunta()">Arcén</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esCorrecto(), cambiarPregunta()">Ángulo de visibilidad</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Carretera</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Paso a nivel</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <div data-role="page" id="pregunta6">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Es el área de la vía destinada únicamente para la circulación de vehículos automotor, de pedal o de tracción animal.</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esFalso(), cambiarPregunta()">Acera</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Parada</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Estacionamiento</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esCorrecto(), cambiarPregunta()">Calzada</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <div data-role="page" id="pregunta7">
+
+        <div data-role="main" class="ui-content">
+            <center>
+                <p id="textoPregunta">Operación de vehículos con manifiesto desprecio por la vida, con notoria y deliberada transgresión a las normas de tránsito, poniendo en peligro concreto la vida o integridad física de las personas y sus bienes.</p>
+            </center>
+            <center>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onclick="esFalso(), cambiarPregunta()">Aventajamiento</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Conducción temeraria</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esFalso(), cambiarPregunta()">Conductor</a>
+                <a href="#alerta" class="ui-btn ui-corner-all ui-shadow" onClick="esCorrecto(), cambiarPregunta()">Estado del Vehiculo</a>
+            </center>
+        </div>
+
+    </div>
+    
+    <!-- Aqui TERMINAN TODAS LAS PREGUNTAS-->
+    
     <!-- Aqui se encuentra la pagina de la ley 431, donde se pueden filtrar por articulo -->
     <div data-role="page" id="paginaLey431">
         <div data-role="main" class="ui-content">
@@ -628,6 +771,66 @@ animal.</h1></b></center>
     <script>
         function loadPageLey() {
             $.mobile.changePage("#paginaLey431");
+        }
+    </script>
+    
+    <script>
+        var puntaje = 0;
+
+        function esCorrecto() {
+            puntaje = puntaje + 1;
+            document.getElementById("iconRespuesta").src = "img/correctIcon.png";
+            document.getElementById("textoAlerta").innerHTML = "¡Es correcto!";
+        }
+
+        function esFalso() {
+            puntaje = puntaje - 1;
+            document.getElementById("iconRespuesta").src = "img/wrongIcon.png";
+            document.getElementById("textoAlerta").innerHTML = "Te equivocaste...";
+        }
+
+        function checkPuntaje() {
+            if (puntaje < 0) {
+                document.getElementById("buttonSiguiente").href = "#paginaTest";
+            }
+        }
+
+        function ponerPuntaje0() {
+            puntaje = 0;
+//            document.getElementById("textoPuntaje").innerHTML = "Puntaje: " + puntaje;
+        }
+
+        function ponerAlertaDefault() {
+            document.getElementById("buttonSiguiente").innerHTML = "Siguiente pregunta";
+        }
+
+        function cambiarPregunta() {
+            var randomIndex = Math.floor((Math.random() * 4) + 1);
+            if (puntaje >= 0) {
+                if (randomIndex == 1) {
+                    document.getElementById("buttonSiguiente").href = "#pregunta1";
+                    document.getElementById("buttonIniciar").href = "#pregunta1";
+                } else if (randomIndex == 2) {
+                    document.getElementById("buttonSiguiente").href = "#pregunta2";
+                    document.getElementById("buttonIniciar").href = "#pregunta2";
+                } else if (randomIndex == 3) {
+                    document.getElementById("buttonSiguiente").href = "#pregunta3";
+                    document.getElementById("buttonIniciar").href = "#pregunta3";
+                } else if (randomIndex == 4) {
+                    document.getElementById("buttonSiguiente").href = "#pregunta4";
+                    document.getElementById("buttonIniciar").href = "#pregunta4";
+                } else if (randomIndex == 5) {
+                    document.getElementById("buttonSiguiente").href = "#pregunta5";
+                    document.getElementById("buttonIniciar").href = "#pregunta5";
+                } else if (randomIndex == 6) {
+                    document.getElementById("buttonSiguiente").href = "#pregunta6";
+                    document.getElementById("buttonIniciar").href = "#pregunta6";
+                }
+            } else if (puntaje < 0) {
+                document.getElementById("buttonSiguiente").href = "#paginaTest";
+                document.getElementById("buttonSiguiente").innerHTML = "Volver al menú principal";
+                document.getElementById("textoAlerta").innerHTML = "PERDISTE PAPU";
+            }
         }
     </script>
 
