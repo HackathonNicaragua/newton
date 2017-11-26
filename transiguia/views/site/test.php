@@ -5,23 +5,34 @@
  * Date: 25/11/2017
  * Time: 20:30
  */
+use yii\helpers\Url;
 use yii\helpers\VarDumper;
 use app\models\PreguntaRespuestaCompleta;
 use yii\helpers\Json;
 
 $preguntas = Json::encode(PreguntaRespuestaCompleta::find()->asArray()->all());
 //VarDumper::dump($preguntas, 10, true);exit();
+
 ?>
+<input type="hidden" ng-model="IdActual" value="{{value}}">
 <div ng-controller="PreguntasCotroller">
     <span ng-init='preguntas = <?php echo $preguntas;?>'></span>
+    <br><br>
 
-    <div id="Pregunta0" class="animated slideInRight">
+    <div id="Inicio" class="animated slideInRight">
+        <h3><b>Consigue la puntuacion minima para aprobar el test</b></h3>
+        <br>
+        <button class="btn btn-success btn-lg animated slideInRight" ng-click="Iniciar()">Inciar</button>
+    </div>
+
+    <div id="Pregunta0" style="display: none" class="animated slideInRight">
         <div class="center"><b><h3>{{preguntas[0].Pregunta}}</b></h3></div>
         <br>
         <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Siguiente(0)">Calzada</button>
         <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Respuesta(0)">{{preguntas[0].Respuesta}}</button>
         <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Siguiente(0)">Carril</button>
-        <button class="btn btn-danger btn-lg animated slideInRight">Estacionamiento</button>
+        <button class="btn btn-danger btn-lg animated slideInRight" ng-click="Siguiente(0)">Conducción temeraria</button>
+
     </div>
 
     <div id="Pregunta1" style="display: none">
@@ -360,9 +371,5 @@ $preguntas = Json::encode(PreguntaRespuestaCompleta::find()->asArray()->all());
     <br>
     <div id="chartContainer" style="height: 370px; width: 100%;">
     </div>
-
-    <br>
-
-    <button class="btn btn-primary btn-lg" style="display: none" id="again" ng-click="Intentar()">Intentar de nuevo</button>
 
 </div>

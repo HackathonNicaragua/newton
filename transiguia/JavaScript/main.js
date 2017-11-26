@@ -12,24 +12,38 @@ function PreguntasCotroller($scope, $http)
         $(targetFirst).fadeOut(0, function(){ $(this).remove();
             //console.log(targetNext);
             var targetNext = '#Pregunta' + (parseInt(id) + 1);
-            if (targetNext != '#Pregunta37') {
+            if (targetNext != '#Pregunta3') {
                 $(targetNext).fadeIn();
                 $(targetNext).addClass('slideInRight');
             }
             else {
-                mostrarGrafico();
-                mostrarBotonIntentar();
+                mostrarBotones();
+                mostrarGrafico(id);
             }
         });
     }
 
-    $scope.Intentar = function(target)
-    {
-        
+    function mostrarBotones() {
+        var reinicio = '#Reiniciar';
+        var salir = '#Salir';
+        $(reinicio).fadeIn();
+        $(reinicio).addClass('slideInRight');
+        $(salir).fadeIn();
+        $(salir).addClass('slideInRight');
     }
 
-    function mostrarGrafico() {
-        var correctas = parseFloat(total/37 * 100);
+    $scope.Iniciar = function () {
+        var targetFirst = '#Inicio';
+        $(targetFirst).fadeOut(0, function(){ $(this).remove();
+            //console.log(targetNext);
+            var targetNext = '#Pregunta0';
+            $(targetNext).fadeIn();
+            $(targetNext).addClass('slideInRight');
+        });
+    }
+
+    function mostrarGrafico(id) {
+        var correctas = parseFloat(total/(id+1) * 100);
         var incorrectas = 100 - correctas;
         var chart = new CanvasJS.Chart("chartContainer", {
             exportEnabled: true,
@@ -109,3 +123,4 @@ function CalculadoraController($scope, $http)
 
 app.controller('PreguntasCotroller', PreguntasCotroller);
 app.controller('CalculadoraController', CalculadoraController);
+app.controller('SaberMasController', SaberMasController);
