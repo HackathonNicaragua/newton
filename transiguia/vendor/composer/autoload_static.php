@@ -28,6 +28,10 @@ class ComposerStaticInit8728c04e494a1d9d2834087054b67efe
             'yii\\' => 4,
             'yii2tech\\html2pdf\\' => 18,
         ),
+        'r' => 
+        array (
+            'rmrevin\\yii\\fontawesome\\' => 24,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -44,6 +48,7 @@ class ComposerStaticInit8728c04e494a1d9d2834087054b67efe
         ),
         'd' => 
         array (
+            'dmstr\\' => 6,
             'dektrium\\user\\' => 14,
         ),
         'c' => 
@@ -133,6 +138,10 @@ class ComposerStaticInit8728c04e494a1d9d2834087054b67efe
         array (
             0 => __DIR__ . '/..' . '/yii2tech/html2pdf',
         ),
+        'rmrevin\\yii\\fontawesome\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rmrevin/yii2-fontawesome',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
@@ -154,6 +163,10 @@ class ComposerStaticInit8728c04e494a1d9d2834087054b67efe
         'kartik\\base\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
+        ),
+        'dmstr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmstr/yii2-adminlte-asset',
         ),
         'dektrium\\user\\' => 
         array (
@@ -242,6 +255,13 @@ class ComposerStaticInit8728c04e494a1d9d2834087054b67efe
     );
 
     public static $prefixesPsr0 = array (
+        'c' => 
+        array (
+            'cebe\\gravatar\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/cebe/yii2-gravatar',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
