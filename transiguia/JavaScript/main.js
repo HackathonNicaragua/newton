@@ -121,6 +121,17 @@ function CalculadoraController($scope, $http)
     }
 }
 
+function SaberMasController($scope, $http)
+{
+   var Articulo = $('#Arto').val()
+   var Descripcion = $('#Descripcion').val()
+
+
+   $scope.articulo = Articulo
+   $scope.Descripcion = Descripcion
+
+}
+
 app.controller('PreguntasCotroller', PreguntasCotroller);
 app.controller('CalculadoraController', CalculadoraController);
 app.controller('SaberMasController', SaberMasController);
