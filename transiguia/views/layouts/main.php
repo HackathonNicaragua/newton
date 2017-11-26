@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $content string */
 
 
-if (Yii::$app->controller->action->id === 'login') { 
+if (Yii::$app->controller->action->id === 'login') {
 /**
- * Do not use this code in your template. Remove it. 
+ * Do not use this code in your template. Remove it.
  * Instead, use the code  $this->layout = '//main-login'; in your controller.
  */
     echo $this->render(
@@ -43,10 +43,11 @@ if (Yii::$app->controller->action->id === 'login') {
         <script type="text/javascript" src="../../JavaScript/main.js"></script>
         <script type="text/javascript" src="../../JavaScript/alertify.js"></script>
         <script type="text/javascript" src="../../JavaScript/alertify.min.js"></script>
+        <script type="text/javascript" src="../../JavaScript/canvasjs.min.js"></script>
         <link rel="stylesheet" href="../../JavaScript/css/themes/bootstrap.min.css">
         <?php $this->head() ?>
     </head>
-    <body class="hold-transition skin-blue sidebar-mini" ng-app='MyApp'>
+    <body class="<?= \dmstr\helpers\AdminLteHelper::skinClass() ?>" ng-app='MyApp'>
     <?php $this->beginBody() ?>
     <div class="wrapper">
 
