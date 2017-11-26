@@ -73,6 +73,28 @@
         #textoPregunta {
             font-weight: bold;
         }
+
+        #bloque {
+            background-color: #e6e6e6;
+            color: black;
+            text-shadow: none;
+        }
+
+        td {
+            padding: 0;
+            margin: 0;
+            border-bottom-style: solid;
+            border-radius: 15px;
+            border-color: #d9d9d9;
+        }
+
+        th {
+            padding: 0;
+            margin: 0;
+            border-bottom-style: solid;
+            border-radius: 15px;
+            border-color: #d9d9d9;
+        }
     </style>
     <title>TransiGuía Móvil</title>
 </head>
@@ -90,7 +112,7 @@
                 <a href="#paginaTest">¡Consigue tu licencia!</a>
             </li>
             <li data-icon="plus">
-                <a href="#">Calculadora Multas</a>
+                <a href="#paginaCalc">Calculadora Multas</a>
             </li>
             <li data-icon="search">
                 <a href="#paginaLey431">¿Quieres saber más?</a>
@@ -478,7 +500,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta22">
 
         <div data-role="main" class="ui-content">
@@ -493,7 +515,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta23">
 
         <div data-role="main" class="ui-content">
@@ -508,7 +530,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta24">
 
         <div data-role="main" class="ui-content">
@@ -523,7 +545,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta25">
 
         <div data-role="main" class="ui-content">
@@ -538,7 +560,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta26">
 
         <div data-role="main" class="ui-content">
@@ -553,7 +575,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta27">
 
         <div data-role="main" class="ui-content">
@@ -568,7 +590,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta28">
 
         <div data-role="main" class="ui-content">
@@ -583,7 +605,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta29">
 
         <div data-role="main" class="ui-content">
@@ -598,7 +620,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta30">
 
         <div data-role="main" class="ui-content">
@@ -613,7 +635,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta31">
 
         <div data-role="main" class="ui-content">
@@ -628,7 +650,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta32">
 
         <div data-role="main" class="ui-content">
@@ -643,7 +665,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta33">
 
         <div data-role="main" class="ui-content">
@@ -658,7 +680,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta34">
 
         <div data-role="main" class="ui-content">
@@ -673,7 +695,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta35">
 
         <div data-role="main" class="ui-content">
@@ -688,7 +710,7 @@
         </div>
 
     </div>
-    
+
     <div data-role="page" id="pregunta36">
 
         <div data-role="main" class="ui-content">
@@ -1236,6 +1258,307 @@ animal.</h1></b></center>
         </div>
     </div>
 
+    <!-- Aqui empieza la pagina de la calculadora de multas-->
+    <div data-role="page" id="paginaCalc">
+        <div data-role="main" class="ui-content">
+            <center><p id="textoCalc" style="font-weight: bold">Tu total es: C$ 0</p></center>
+            <br>
+            <a class="ui-btn ui-corner-all" href="#" onclick="ponerCalc0()">Reiniciar</a>
+            <br>
+            <form>
+                <input id="inputFilter" data-type="search">
+            </form>
+            <table data-role="table" id="tableMultas" data-filter="true" data-input="#inputFilter" class="ui-responsive">
+                <thead>
+                    <tr>
+                        <th style="color: darkred">Descripción</th>
+                        <th style="color: darkred">Cantidad</th>
+                        <th style="color: darkred">¿Agregar al total?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Conducir en estado de ebriedad.</th>
+                        <td>C$ 1500.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(1500)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir bajo el efecto de drogas o sustancias psicotrópicas</th>
+                        <td>C$ 1500.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(1500)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Provocar accidentes y darse a la fuga. </th>
+                        <td>C$ 1500.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(1500)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Estacionarse en la vía pública sin señales lumínicas o triángulos.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Aventajar en pendientes, curvas o puentes.</th>
+                        <td>C$ 400.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(400)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Desatender señales de emergencias,lumínicas sonoras de ambulancias,policía o bomberos.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Adelantar en línea continua amarilla.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th> Invasión de carril.</th>
+                        <td>C$ 400.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(400)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Giros indebidos, en "U" y zig zag.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir con las puertas abiertas transporte colectivo y de carga.</th>
+                        <td>C$ 400.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(400)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir en contra de la vía.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Exceso de pasajeros o de carga.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir, acompañar o transportar niños menores de siete años en el asiento delantero o niños en los brazos de adultos en el asiento delantero sin cinturón de seguridad.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Desantender señales de tráfico siempre que estén</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir carga sin la debida señalización.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Obstrucción de la libre circulación vehicular.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir cuadraciclos en las playas en época de temporada de verano.</th>
+                        <td>C$ 450.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(450)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir buses y camiones con el escape en posición horizontal.</th>
+                        <td>C$ 450.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(450)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Estacionar en carreteras, trailers, rastras y contenedores sin señal alguna.</th>
+                        <td>C$ 1000.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(1000)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir sin seguro de licencia y/o vehículo.</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>No guardar la distancia entre uno y otro vehículo.</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>No usar lonas o carpas en los camiones cuando trasladan carga a granel.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>No portar triángulos fluorescentes.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th> Conducir atendiendo celulares.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir motocicletas o cuadraciclos sin casco de protección</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Recoger pasajeros fuera de la bahía o lugares no establecidos como paradas.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Estacionarse: frente a hidrantes, garajes, entradas de hospitales y clinicas, estacionamientos para discapacitados, aceras, andenes y parada de buses.</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir con las luces apagadas después de la hora indicada, o durante el día cuando hayan condiciones ambientales de lluvia, neblina o tolvanera</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Circular con los vehículos sobre bulevares, aceras o andenes.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir de retroceso en la vía pública.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Aventajar por la derecha en vías de un solo carril.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Circulación de vehículos sobre aceras o andenes.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Bajar o subir pasajeros por el lado izquierdo en la vía pública.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Realizar señales equivocadas sobre sus maniobras al conducir.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>No respetar la preferencia peatonal o los cruces de colegios.</th>
+                        <td>C$ 400.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(400)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir sin tener licencia.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir con aliento alcohólico, pero no en estado de ebriedad, de acuerdo a lo establecido en el artículo 27 de la presente Ley. </th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Vehículo en mal estado mecánico.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Provocar ruidos escandalosos y pertuba- dores del medio ambiente.</th>
+                        <td>C$ 300.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(300)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Provocar exceso de humo.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Usar placas y/o circulación de otro vehículo.
+                        </th>
+                        <td>C$ 400.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(400)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir sin portar placas y/o licencia de circulación.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir con licencia en categorías diferentes a la autorizada.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Transporte colectivo, no detenerse a recoger pasajeros en las paradas.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir con la matrícula vencida.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Circular sin placas visibles.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir con la licencia vencida.</th>
+                        <td>C$ 150.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(150)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Prestar servicio de transporte público sin la debida autorización.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir fuera de la ruta autorizada, para el transporte colectivo</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>No reportar los cambios de las características físicas del vehiculo.</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir sin portar licencia.</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>No usar loderas en las llantas traseras en los vehículos de carga o de pasajeros.</th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Conducir vehículos sin espejo retrovisor o laterales.
+                        </th>
+                        <td>C$ 100.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(100)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Tirar basura, gases o desechos en la vía pública desde vehículos automotores.</th>
+                        <td>C$ 200.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(200)">Agregar</a></td>
+                    </tr>
+                    <tr>
+                        <th>Circulación de bicicletas o medios de transporte de tracción animal sin señales lumínicas visibles. </th>
+                        <td>C$ 50.00</td>
+                        <td><a class="ui-btn ui-corner-all ui-icon-plus" onclick="sumarMulta(50)">Agregar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <script>
         function loadPageLey() {
             $.mobile.changePage("#paginaLey431");
@@ -1425,6 +1748,21 @@ animal.</h1></b></center>
                 }
             }
         }
+    </script>
+    
+    <script>
+        var totalMulta = 0;
+        
+        function sumarMulta(precio) {
+            totalMulta = totalMulta + precio;
+            document.getElementById("textoCalc").innerHTML = "Tu total es C$ " + totalMulta;
+        }
+        
+        function ponerCalc0() {
+            totalMulta = 0;
+            document.getElementById("textoCalc").innerHTML = "Tu total es C$ " + totalMulta;
+        }
+        
     </script>
 </body>
 
