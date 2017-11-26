@@ -9,7 +9,7 @@
     <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <script src="js/cordova.js"></script>
+    <!--    <script src="js/cordova.js"></script>-->
     <script>
         //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
         $(function() {
@@ -62,13 +62,13 @@
                 <a href="#paginaPrincipal">Inicio</a>
             </li>
             <li>
-                <a href="#paginaLey431" class="ui-btn">Ley 431</a>
+                <a href="#paginaTest" class="ui-btn">¡Consigue tu licencia!</a>
             </li>
             <li>
-                <a href="#" class="ui-btn">Señales</a>
+                <a href="#" class="ui-btn">Calculadora Multas</a>
             </li>
             <li>
-                <a href="#" class="ui-btn">Test</a>
+                <a href="#paginaLey431" class="ui-btn">¡Estudia la ley 431!</a>
             </li>
             <li>
                 <a href="#" class="ui-btn">Info. Contacto</a>
@@ -130,6 +130,7 @@
                     <li><a href="#art21">Artículo 21</a></li>
                     <li><a href="#art22">Artículo 22</a></li>
                     <li><a href="#art23">Artículo 23</a></li>
+<!--
                     <li><a href="#art24">Artículo 24</a></li>
                     <li><a href="#art25">Artículo 25</a></li>
                     <li><a href="#art26">Artículo 26</a></li>
@@ -276,6 +277,7 @@
                     <li><a href="#art167">Artículo 167</a></li>
                     <li><a href="#art168">Artículo 168</a></li>
                     <li><a href="#art169">Artículo 169</a></li>
+-->
                 </ul>
             </center>
         </div>
@@ -425,6 +427,14 @@
 calcomanías.</h1></b></center>
             <center>
                 <p id="parrafoArto">Para los fines y efectos de la presente Ley, los propietarios de vehículos automotores deberán de pagar el arancel de derecho de matrícula, placas, licencia de circulación y calcomanías de acuerdo a los valores siguientes: </p>
+                <p id="parrafoArto"><b>Para vehiculos de cuatro o mas ruedas:</b></p>
+                <p id="parrafoArto">- Placas: 125.00 C$</p>
+                <p id="parrafoArto">- Derecho de matrícula y calcomanía: 125.00 C$</p>
+                <p id="parrafoArto">- Licencia de Circulación: 50.00 C$</p>
+                <p id="parrafoArto"><b>Motocicletas:</b></p>
+                <p id="parrafoArto">- Placas: 100.00 C$</p>
+                <p id="parrafoArto">- Derecho de matrícula y calcomanía: 75.00 C$</p>
+                <p id="parrafoArto">- Licencia de Circulación: 50.00 C$</p>
             </center>
             <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
         </div>
@@ -432,12 +442,186 @@ calcomanías.</h1></b></center>
 
     <div data-role="page" id="art9">
         <div data-role="main" class="ui-content">
-            <center><b><h1>Arto. 9. Pago   de   arancel   de   derecho   de   matrícula,   placas,   licencia   de   circulación   y   
-calcomanías.</h1></b></center>
+            <center><b><h1>Arto. 9. Vigencia y renovación de especies fiscales.</h1></b></center>
             <center>
-                <p id="parrafoArto">El Ministerio de Hacienda y Crédito Público, los Gobiernos Locales y la Policía Nacional, a través de la Especialidad Nacional de Seguridad de Tránsito, de conformidad con la Ley No. 290, Ley de Organización, Competencia y Procedimientos del Poder Ejecutivo y la Ley Nº 228, Ley de la Policía Nacional, publicadas en La Gaceta, Diario Oficial número 102 del tres de junio de 1998 y en la número 162 del 28 de Agosto de 1996 respectivamente, deberán establecer las coordinaciones necesarias para la aplicación de la presente Ley y los respectivos procedimientos administrativos. </p>
+                <p id="parrafoArto">Las especies fiscales establecidas en el artículo anterior, tienen la siguiente vigencia:</p>
+                <p id="parrafoArto">La licencia de circulación, derecho de matrícula, calcomanía y placas, serán permanentes. La renovación de estos documentos se realizará cuando haya cambio de dueño, modificación de las características físicas del vehículo, o por deterioro de la calcomanía. </p>
+                <p id="parrafoArto">En el caso de la licencia de circulación, se deberá de renovar obligatoriamente cuando haya cambio de domicilio y su costo será de sesenta córdobas.</p>
+                <p id="parrafoArto">En los casos de bicicleta, medios de transporte de impulso humano y de tracción animal, los trámites relacionados con licencias de circulación y placas se realizarán ante los gobiernos locales correspondientes, quienes previa coordinación con la Especialidad de Seguridad de Tránsito, establecerán los requisitos correspondientes. </p>
             </center>
             <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art10">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 10. Pago de derechos y tasas en ventanilla única.</h1></b></center>
+            <center>
+                <p id="parrafoArto">La recaudación y modalidades de pago de los derechos y tasas establecidos en el Artículo 8 de la presente Ley, se efectuarán en ventanilla única de la Dirección General de Ingresos del Ministerio de Hacienda y Crédito Público o en cualquiera de los bancos del país con los cuales exista convenio para tal actividad. </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art11">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 11. Creación del impuesto municipal de rodamiento.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Créase el impuesto municipal de rodamiento, el que tendrá las denominaciones y valores siguientes:
+                </p>
+                <p id="parrafoArto">- Motocicletas de uso particular y estatal: 50.00</p>
+                <p id="parrafoArto">- Tractores y maquinaria agrícola. Se exceptúan implementos agrícolas: 75.00</p>
+                <p id="parrafoArto">- Automóviles, camionetas y jeeps de uso particular y estatal: 100.00 </p>
+                <p id="parrafoArto">- Taxis y camionetas de uso comercial: 125.00</p>
+                <p id="parrafoArto">- Microbuses de uso comercial: 150.00</p>
+                <p id="parrafoArto">- Remolques de más de dos ejes: 250.00</p>
+                <p id="parrafoArto">- Buses de uso comercial: 300.00</p>
+                <p id="parrafoArto">- Camiones de menos de 7 toneladas: 400.00</p>
+                <p id="parrafoArto">- Montacargas: 500.0</p>
+                <p id="parrafoArto">- Camiones de hasta 12 toneladas: 600.00</p>
+                <p id="parrafoArto">- Cabezales: 600.0</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art12">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 12. Pago del impuesto de rodamiento.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Los propietarios de vehículos automotor deben de presentar ante las Autoridades de Policía o Administrativa, el recibo de pago de su impuesto de rodamiento o la calcomanía respectiva del año corriente, para la realización de cualquier trámite relacionado con su vehículo, caso contrario, no se le atenderán ni resolverán sus trámites respectivos.</p>
+                <p id="parrafoArto">Se exceptúan del pago del impuesto de rodamiento a los jubilados del país.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art13">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 13. Exención de pago de derechos o tasas.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Quedan exentos del pago de los derechos o tasas establecidas en el Artículo 8 de la presente Ley, de conformidad al principio de reciprocidad, los propietarios de vehículos del Cuerpo Diplomático y Consular así como los de Organismos Internacionales acreditados en el país.</p>
+                <p id="parrafoArto">En cualquiera de los casos, la tramitación de derecho de matrícula, placas, licencia de circulación y calcomanía de los vehículos exonerados en el párrafo anterior, se deberá de efectuar a través del Ministerio de Relaciones Exteriores el que deberá de realizar las coordinaciones pertinentes con la Policía Nacional, por medio de la Especialidad de Seguridad de Tránsito Nacional. </p>
+                <p id="parrafoArto">También quedan exentos de todo pago de aranceles de tránsito, por el tipo de servicio que estas Instituciones brindan a la Sociedad, los vehículos de la Dirección General de Bomberos de Nicaragua, Cuerpo de Bomberos Voluntarios, Cruz Roja, Cruz Verde, Ejército de Nicaragua y Policía Nacional. Para la atención a estas Instituciones, la Policía Nacional establecerá una ventanilla de atención especial. </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art14">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 14. Trámites de obtención del derecho de matrícula o renovación.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Para la obtención del derecho de matrícula o su renovación representado en calcomanía, los propietarios de vehículos que circulen en el territorio nacional, deberán dar cumplimiento al procedimiento y mecanismos que al respecto resulten necesarios, según los criterios técnicos que establezca la Policía Nacional en conjunto con el Ministerio de Hacienda y Crédito Público para la emisión de las calcomanías, así como para el retiro de placas y licencias de circulación. </p>
+                <p id="parrafoArto">En ningún caso el plazo de este procedimiento podrá ser mayor de sesenta días, contados a partir de la fecha de presentada la solicitud del trámite.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art15">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 15. Calcomanías para placas mayores y menores.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Para los fines y efectos de la presente Ley, las placas podrán ser mayores o menores. En los casos de los vehículos de cuatro ruedas o más, las placas son mayores; y menores, cuando tengan menos de cuatro ruedas. Las calcomanías tendrán las especificaciones siguientes: </p>
+                <p id="parrafoArto">1. Para vehículos con placas mayores: Forma rectangular, con una dimensión de 86 x 54 milímetros.</p>
+                <p id="parrafoArto">2. Para vehículos con placas menores: Forma de cuadrado, con una dimensión de 30 x 30 milímetros. </p>
+                <p id="parrafoArto">Las calcomanías deberán cumplir con las normas de seguridad para las terceras placas, de conformidad a las normas de seguridad internacional establecidas al respecto.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art16">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 16. Valor de la calcomanía del derecho de matrícula.</h1></b></center>
+            <center>
+                <p id="parrafoArto">El valor del derecho de matrícula, representado en calcomanía, corresponderá a la cantidad de ciento veinticinco córdobas. Esta calcomanía deberá ser ubicada en la parte interna izquierda e inferior del vidrio delantero de los vehículos con placas mayores; en el caso de los vehículos con placas menores, se deberá de adherir en la esquina superior derecha de la placa, de conformidad a las normativas administrativas que establezca la Especialidad Nacional de Seguridad de Tránsito. </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art17">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 17. Requisitos para la renovación de matrícula.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Para los fines y efectos de la renovación de matrícula de vehículos, se establecen los siguientes requisitos: </p>
+                <p id="parrafoArto">1. Pago de los aranceles correspondientes, calcomanía y licencia de circulación del vehículo.</p>
+                <p id="parrafoArto">2. Fotocopia de la tarjeta de circulación actual. </p>
+                <p id="parrafoArto">3. Poder especial de representación, en escritura pública, en caso de que la persona que tramite el derecho de matrícula no sea el propietario. </p>
+                <p id="parrafoArto">4. Sticker de rodamiento del año corriente.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art18">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 18. Infracciones y sus acumulaciones.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Las acciones u omisiones contrarias a la presente Ley o a las normas administrativas dictadas por la Autoridad de Aplicación, tendrán el carácter de infracciones y serán sancionadas según corresponda en la medida y forma que determine la Ley, sin perjuicio de las responsabilidades civiles y penales a que dieren lugar. </p>
+                <p id="parrafoArto">Las infracciones de tránsito son acumulables. La Policía Nacional, hará valer el efectivo pago de las multas en concepto de infracción a quienes infrinjan la ley, independientemente de la tramitación del proceso penal o civil a que diere lugar la misma ante la autoridad competente. </p>
+                <p id="parrafoArto">Los montos a pagar en concepto de infracciones de tránsito serán únicamente los establecidos en la presente Ley y serán aplicables a todos los conductores de medios de transporte terrestre que circulen en el territorio nacional. </p>
+                <p id="parrafoArto">El infractor, en un plazo no mayor de treinta días, deberá presentarse a cualquiera de las delegaciones de la Administración de Rentas o sucursales bancarias, para hacer efectivo el pago correspondiente, mediante recibo fiscal o minuta de depósito. </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art19">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 19. Diseño de boletas de infracciones.</h1></b></center>
+            <center>
+                <p id="parrafoArto">El Ministerio de Hacienda y Crédito Público, en conjunto con la Policía Nacional, a través de la Especialidad Nacional de Seguridad de Tránsito, deberán diseñar las boletas o formatos necesarios para la aplicación de las infracciones de tránsito. En éstas se deberá establecer el tipo de infracción y su descripción, el monto de la multa, el nombre y apellido del Agente de Tránsito que impone la infracción y la Unidad a la que pertenece. Las boletas serán válidas en todo el territorio nacional.</p>
+                <p id="parrafoArto">El pago de las multas se hará efectivo a favor del Ministerio de Hacienda y Crédito Público.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art20">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 20. Obligación del Agente de Tránsito.</h1></b></center>
+            <center>
+                <p id="parrafoArto">El Agente de Tránsito de la Policía Nacional, que deberá estar debidamente identificado, debe de entregar de forma obligatoria al infractor, la boleta o recibo debidamente numerado, en el que se debe de indicar la o las infracciones o normas violentadas. </p>
+                <p id="parrafoArto">En las subsiguientes veinticuatro horas a la infracción, el Agente de Tránsito, deberá de entregar la licencia retenida en la unidad en que presta sus servicios, de no efectuarlo así, es responsable por el costo de la pérdida o extravío de la misma. </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art21">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 21. Responsabilidad por daños.</h1></b></center>
+            <center>
+                <p id="parrafoArto">El propietario de un vehículo que causare o provoque la colisión o accidente de tránsito por desperfectos mecánicos o técnicos, falta de pericia, imprudencia o negligencia, será únicamente responsable civilmente, por los daños causados a terceros; igualmente lo será cuando el conductor de dicho vehículo no posea licencia de conducir, o teniéndola no corresponda la categoría o tipo con el vehículo conducido, sin detrimento de las responsabilidades civiles y penales que puedan ser imputadas al conductor. </p>
+                <p id="parrafoArto">En los casos en que a consecuencia de cualquier colisión o accidente de tránsito y que únicamente existan daños materiales, las partes involucradas podrán convenir un arreglo de pago que deberá de hacerse constar en Escritura Pública.</p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art22">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 22. Señales  lumínicas  para  medios  de  transporte  automotores,  de  pedal  y  de  tracción  
+animal.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Los buses, camiones, trailers, vehículos de acarreo, medios de tracción animal y medios de transporte de pedal, bicicletas y similares, que circulen después de las dieciocho horas, deberán colocar señales lumínicas de dinamo y cintas adhesivas reflectivas en el parachoque delantero y trasero del medio de transporte. </p>
+                <p id="parrafoArto">De no poseerla, se retendrá la circulación y se le aplicará la infracción respectiva contemplada en el Artículo 26 de la presente Ley. </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+    
+    <div data-role="page" id="art23">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 23. Precauciones necesarias y uso de luces.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Los buses, camiones, trailers, vehículos de acarreo, medios de tracción animal y medios de transporte de pedal, bicicletas y similares, que circulen después de las dieciocho horas, deberán colocar señales lumínicas de dinamo y cintas adhesivas reflectivas en el parachoque delantero y trasero del medio de transporte. </p>
+                <p id="parrafoArto">De no poseerla, se retendrá la circulación y se le aplicará la infracción respectiva contemplada en el Artículo 26 de la presente Ley. </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
         </div>
     </div>
 
