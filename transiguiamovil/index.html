@@ -1643,7 +1643,8 @@ animal.</h1></b></center>
             $.mobile.changePage("#paginaLey431");
         }
     </script>
-
+    
+    <!-- Este es el script con el que el juego de preguntas funciona, basicamente tenemos dos funciones, una para los botones de las respuestas correctas y otro para las malas, el usuario no "pierde" si no mas bien, se le de feedback de que debe estudiar mas para sacar un porcentaje mayor de acierto, tambien tenemos una para reiniciar los valores de limite y puntaje y el mas importante el cambiarPregunta, este genera un numero random el cual sirve para, con unas condiciones cargue una page diferente, por ejemplo si el numero random es 2 cargara la page pregunta2 y asi con las demas, pero al momento de llegar a la 10ma pregunta, deja de generarlas y mas bien lo manda a la pagina principal, al que lea esto, perdon por el desastre de codigo :^) -->
     <script>
         var puntaje = 0;
         var limite = 0;
@@ -1809,7 +1810,8 @@ animal.</h1></b></center>
             }
         }
     </script>
-
+    
+    <!-- Este script es para la calculadora de multas, es muy sencillo solo suma lo que le mandamos como argumento y tambien tenemos uno para reiniciarlo  -->
     <script>
         var totalMulta = 0;
 
@@ -1823,14 +1825,15 @@ animal.</h1></b></center>
             document.getElementById("textoCalc").innerHTML = "Tu total es C$ " + totalMulta;
         }
     </script>
-
+    
+<!--    Esta funcion captura cuando el usuario presiona el boton back fisico del telefono y dependendiendo de que en que page el DOM este, lo redirecciona a otra, basada en la jerarquia de paginas.-->
     <script>
         document.addEventListener("deviceready", onDeviceReady, false);
 
         function onDeviceReady() {
             document.addEventListener("backbutton", onBackKeyPress, false);
         }
-
+        
         function onBackKeyPress() {
             /* If the current page is the login page, disable the button completely (aka do nothing) */
             if ($.mobile.activePage.attr('id') == 'paginaPrincipal') {
