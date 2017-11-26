@@ -9,7 +9,7 @@
     <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <!--    <script src="js/cordova.js"></script>-->
+    <script src="js/cordova.js"></script>
     <script>
         //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
         $(function() {
@@ -34,14 +34,25 @@
             margin-top: 20px;
         }
 
+        #logo {
+            display: block;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         #miPanel {
             background-color: #f2f2f2;
+        }
+
+        #parrafoArto {
+            text-align: justify;
         }
     </style>
     <title>TransiGuía Móvil</title>
 </head>
 
-<body>
+<body id="bodyZoom">
     <!-- Aqui se crea el panel lateral que servira para todas las pages -->
     <div data-role="panel" id="miPanel" data-position="left" data-display="overlay" data-theme="a">
 
@@ -51,16 +62,16 @@
                 <a href="#paginaPrincipal">Inicio</a>
             </li>
             <li>
-                <a href="#paginaLey431" class="buttonInciso">Ley 431</a>
+                <a href="#paginaLey431" class="ui-btn">Ley 431</a>
             </li>
             <li>
-                <a href="#" class="buttonInciso">Señales</a>
+                <a href="#" class="ui-btn">Señales</a>
             </li>
             <li>
-                <a href="#" class="buttonInciso">Test</a>
+                <a href="#" class="ui-btn">Test</a>
             </li>
             <li>
-                <a href="#" class="buttonInciso">Info. Contacto</a>
+                <a href="#" class="ui-btn">Info. Contacto</a>
             </li>
         </ul>
 
@@ -77,7 +88,7 @@
             <center>
                 <p><b>Bienvenido a la aplicación TransiGuía Móvil</b></p>
             </center>
-            <center><img src="img/icon.png"></center>
+            <center><img src="img/icon.png" id="logo"></center>
             <center>
                 <p>Para navegar, presiona el botón de menú en la esquina superior izquierda</p>
             </center>
@@ -269,6 +280,173 @@
             </center>
         </div>
     </div>
+
+    <!-- Aqui empiezan las paginas individuales de cada articulo -->
+
+    <div data-role="page" id="art1">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 1. Objeto de la ley</h1></b></center>
+            <center>
+                <p id="parrafoArto">La presente Ley tiene por objeto, establecer los requisitos y procedimientos para normar el régimen de circulación vehicular en el territorio nacional, con relación a las Autoridades de Tránsito, los vehículos de transporte en general, el Registro Público de la Propiedad Vehicular, la Educación y Seguridad Vial, la protección del medio ambiente, los seguros obligatorios, así como el otorgamiento y renovación del derecho de matrícula vehicular. También establece otras disposiciones de carácter normativo, dirigidas a fortalecer la protección y seguridad ciudadana, tales como el valor de las infracciones de tránsito, la regulación del tránsito peatonal, vehicular y los semovientes.
+                </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art2">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 2. Autoridad de aplicación</h1></b></center>
+            <center>
+                <p id="parrafoArto">Para los fines y efectos de la presente Ley, se determina como Autoridad de Aplicación de ésta, a la Policía Nacional, por medio de la Especialidad Nacional de Seguridad de Tránsito, la que establecerá las coordinaciones necesarias con las diferentes Instituciones del Estado para su efectiva y correcta aplicación, el uso racional de sus recursos, sean éstos humanos, técnicos o materiales, y determinará las normas administrativas complementarias para la aplicación de la presente Ley.
+                </p>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art3">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 3. Conceptos básicos</h1></b></center>
+            <center>
+                <p id="parrafoArto">Para los fines y efectos de la presente Ley, ténganse como conceptos básicos los siguientes:</p>
+                <ol id="parrafoArto">
+                    <li><b>ACCIDENTE DE TRANSITO:</b> Acción u omisión culposa cometida por cualquier conductor, pasajeros o peatones en la vía pública o privada causando daños materiales, lesiones o muerte de personas, donde interviene por los menos un vehículo en movimiento. </li><br>
+                    <li><b>AVENTAJAMIENTO:</b> Acción y efecto de aventajar un vehículo a otro sobre la marcha.</li><br>
+                    <li><b>ACERA O ANDEN:</b> Es la parte superior de la vía pública destinada únicamente para la circulación peatonal. </li><br>
+                    <li><b>AGENTE DE TRANSITO:</b> Es el oficial de la Policía Nacional encargado de aplicar la Ley para el Régimen de Circulación Vehicular e Infracciones de Tránsito, así como las demás disposiciones administrativas relativas a la materia. </li><br>
+                    <li><b>ARCEN:</b> Franja longitudinal afirmada contiguo a la calzada, que no está destinada al uso de vehículos automotores, salvo circunstancias excepcionales. </li><br>
+                    <li><b>ANGULO DE VISIBILIDAD:</b> Es el área máxima de visión que debe de tener todo conductor al desplazarse sobre la vía. </li><br>
+                    <li><b>BOLETA DE INFRACCIÓN:</b> Formulario mediante el cual se aplica una o más infracciones de tránsito a cualquier conductor, para que éste pague el valor de la misma en moneda de curso legal, por incurrir en la violación a la ley de la materia. </li><br>
+                    <li><b>CALZADA:</b> Es el área de la vía destinada únicamente para la circulación de vehículos automotor, de pedal o los de tracción animal. </li><br>
+                    <li><b>CARRETERA:</b> Es el área determinada y señalizada de forma específica para la circulación de vehículos automotor, de pedal o de tracción animal, que une dos o más poblados, sean estas internacionales, interdepartamentales o bien interurbana. </li><br>
+                    <li><b>CAMINOS: </b>Es el área destinada para la circulación vehicular, sin que esta tenga trazo alguno que determine su dirección. </li><br>
+                    <li><b>CARRIL: </b> Es la banda longitudinal en que puede estar subdividida la calzada, delimitada o no por marcas viales longitudinales, siempre que tenga una anchura determinada y suficiente para permitir la circulación de una fila de automóviles que no sean motocicletas. </li><br>
+                    <li><b>CONDICIONES ATMOSFÉRICAS: </b> Es el conjunto de factores o condiciones climáticas que dificultan la visibilidad del conductor, tales como neblina, lluvia, polvo, humo, entre otros. </li><br>
+                    <li><b>CONDUCTOR: </b>Es toda persona natural que conduce un vehículo del tipo para el que está autorizado, de conformidad a la licencia de conducir. </li><br>
+                    <li><b>DISPOSITIVOS DE TRANSITO: </b>Es el conjunto de señales que regulan el ordenamiento vial.</li><br>
+                    <li><b>DISPOSITIVO ESPECIAL DE SEGURIDAD: </b> Es el conjunto de equipos e implementos del vehículo destinados a resguardar la vida de los pasajeros, tales como sillas de seguridad, cinturones, cascos, entre otros. </li><br>
+                    <li><b></b></li><br>
+                    <li><b>DISPOSITIVOS ESPECIALES DE ADVERTENCIA: </b> Se refiere a los equipos y medios emisores de sonidos y luces que deben de utilizar los vehículos contemplados en régimen preferente, tales como sirenas, luces intermitentes, campanas, sonidos especiales, entre otros. </li><br>
+                    <li><b>ESTADO TÉCNICO DEL VEHÍCULO: </b>Se refiere a las condiciones técnicas y mecánicas del vehículo automotor; las cuales deben ser revisadas y supervisadas antes de ponerlo en marcha. </li><br>
+                    <li><b>ESTACIONARSE: </b>Detener un vehículo en un lugar de la vía pública que está previamente determinado para tal efecto, para que en un tiempo necesario pueda subir o bajar personas o cargas, sin obstaculizar la libre circulación vehicular, pudiendo estar presente o no el conductor. </li><br>
+                    <li><b>ESTACIONAMIENTO: </b>Área especial fuera de la vía destinada exclusivamente para el parqueo de los vehículos automotores. </li><br>
+                    <li><b>EQUIPO ESPECIALIZADO PARA REMOLQUE: </b> Es el vehículo automotor dotado del equipo especial necesario, tales como barras, cadenas u otros, destinado para el remolque de otros vehículos automotores similares que resultasen con averías técnicas o mecánicas en cualquier punto de la vía pública. </li><br>
+                    <li><b>INSPECCIÓN TÉCNICA DE VEHÍCULOS:</b>Es el control, chequeo y revisión que se efectúa de forma periódica para la verificación de las características del vehículo automotor, así como las condiciones mínimas de seguridad para su funcionamiento y circulación.</li><br>
+                    <li><b>INSPECCIÓN MECÁNICA DE VEHÍCULOS: </b>Es el proceso mecánico a través del cual se establece el estado mecánico de cualquier vehículo. </li><br>
+                    <li><b>INTERSECCIÓN: </b>Punto de convergencia de dos o más vías públicas o privadas para su unión o cruce entre sí.</li><br>
+                    <li><b>INVESTIGACIÓN DE ACCIDENTES:</b>Es el conjunto de diligencias y procedimientos que efectúa el agente de tránsito, cuando se presenta un hecho o accidente, en su carácter de auxilio judicial o con el fin de establecer la aplicación de una multa establecida por la ley o cualquier otra de tipo administrativo. </li><br>
+                    <li><b>LICENCIA DE CONDUCIR:</b> Es un documento público de carácter personal e intransferible, de validez en todo el territorio nacional, mediante el cual se autoriza la conducción de vehículos automotores de acuerdo a su categoría. </li><br>
+                    <li><b>PARADA: </b>Es el lugar determinado para la inmovilización de cualquier vehículo, fuera de la vía, durante un tiempo inferior a los cinco minutos, sea para bajar o subir pasajeros y/o carga, bajo la presencia del conductor, con las señales de tránsito requeridas y las precauciones que el caso amerite. </li><br>
+                    <li><b>PEATÓN: </b> Es cualquier ser humano o persona que circula por la vía pública y que no conduce vehículos, incluyendo a niños y discapacitados. </li><br>
+                    <li><b>PERMISOS EN MATERIA DE TRANSITO: </b>Es el documento público que de forma temporal se le otorga a una persona para que conduzca o circule en cualquier vehículo automotor, este documento es intransferible y debe de ser emitido por la Especialidad de Tránsito Nacional, su validez será en todo el territorio nacional. </li><br>
+                    <li><b>PASO PEATONAL: </b>Es el área señalada y destinada para el paso exclusivo de peatones.</li><br>
+                    <li><b>PASO A NIVEL: </b>Es el cruce a la misma altura entre una vía y una línea de ferrocarril con plataforma independiente. </li><br>
+                    <li><b>PASO A DESNIVEL:</b>Es el punto en el que dos vías se interceptan entre sí, una por encima de la otra para que la circulación vehicular se realice a diferentes niveles de la superficie y en distintas direcciones. </li><br>
+                    <li><b>PATRULLAJE MOTORIZADO:</b> Es la acción que realiza el agente de tránsito, auxiliado de una motocicleta, con el fin de regular la circulación de los medios automotores que se desplazan en la vía pública, incluyendo las gasolineras. </li><br>
+                    <li><b>PRUEBA PSICOMOTORA:</b> Es el conjunto de acciones que el agente de tránsito realiza a las personas de las que se sospecha conducen bajo los efectos de bebidas alcohólicas o psicotrópicos y así poder establecer la capacidad y estado físico y los reflejos para continuar o no conduciendo.</li><br>
+                    <li><b>RÉGIMEN PREFERENTE: </b> Es el régimen de preferencia de circulación para los vehículos autorizados por la Ley para el Régimen de Circulación Vehicular e Infracciones de Tránsito, para circular con prioridad de paso por cualquier vía pública. Pertenecen a este régimen preferente los vehículos de bomberos, ambulancias, caravanas militares, auto patrullas de policía y caravanas de Gobierno, las cuales deberán usar dispositivos especiales sonoros y luminosos.</li><br>
+                    <li><b>RED VIAL: </b>Es el conjunto de calles, avenidas, pistas y carreteras, que sirven para el desplazamiento y la circulación de los vehículos automotores, de pedal o los de tracción animal, así como los peatones y transeúntes. </li><br>
+                    <li><b>RED SEMAFÓRICA:</b> Es el conjunto de semáforos instalados para la regulación del paso preferencial de las vías en una ciudad. </li><br>
+                    <li><b>REGULACIÓN A BRAZOS:</b> Son movimientos coordinados y coherentes que realiza el agente de tránsito sobre la vía, para el desplazamiento de los vehículos y el ordenamiento peatonal. </li><br>
+                    <li><b>RETEN:</b> Es la presencia policial para ejercer el control y regulación sobre el parque automotor en puntos predeterminados o no.</li><br>
+                    <li><b>REGISTRO DE PROPIEDAD VEHICULAR:</b> Es la dependencia en donde se efectúa la inscripción y registro de todos los vehículos automotores, sus transferencias, gravámenes, embargos, anotaciones preventivas y las modificaciones sustanciales de sus características físicas y técnicas, así como el debido registro de los conductores y categorías de estos. </li><br>
+                    <li><b>SEÑALES DE TRANSITO: </b>Son los dispositivos de tránsito que sirven para regular la circulación del parque vehicular a través de símbolos y señales convencionales. Las señales ayudan a los conductores y peatones a tener una circulación más fluida, cómoda y segura; las señales prohiben, obligan, y advierten de peligros futuros y proporcionan información oportuna. </li><br>
+                    <li><b>SEÑALES INFORMATIVAS: </b> Son aquellas que tienen por objeto identificar las vías y lugares por donde se va circulando, así como guiar a los conductores y peatones de manera correcta y segura. La forma de estas señales debe de ser rectangular, con excepción de las indicaciones de rutas que podrán tener una forma y tamaño especial, según sea el caso. Los colores varían de acuerdo al tipo de señal, generalmente tienen: blanco, verde, negro y azul. </li><br>
+                    <li><b>SEÑALES PREVENTIVAS: </b>Son aquellas que tienen por objeto prevenir a los conductores y peatones de la existencia de un peligro inminente en la vía y la naturaleza de ese peligro. Su forma debe de ser cuadrada y colocada de manera diagonal. </li><br>
+                    <li><b>SEÑALES REGLAMENTARIAS:</b> Son aquellas que tienen por objeto notificar a los conductores y peatones las limitaciones, prohibiciones y restricciones; cuya violación significa infracciones a la Ley de Tránsito. Su forma es rectangular, a excepción del ALTO y CEDA EL PASO que son octagonales y triangular respectivamente. Tienen leyendas y símbolos que explican su significado. Los colores que distinguen estas señales deben de ser: rojo, blanco y negro. </li><br>
+                    <li><b>SEMÁFORO: </b>Es un dispositivo luminoso que regula los sentidos preferenciales de la circulación vial. </li><br>
+                    <li><b>SEÑALES VERTICALES:</b> Son aquellas que contienen símbolos ubicados en parales y que se encuentran localizados a la orilla de las vías por donde se circula a fin de regular e informar sobre el tránsito. </li><br>
+                    <li><b>SEÑALES HORIZONTALES: </b>Son marcas y símbolos pintados en el pavimento, con fines de regulación de tránsito. </li><br>
+                    <li><b>SUSPENSIÓN DE LICENCIA:</b>Es la acción administrativa que ejerce la Especialidad de Tránsito, en cumplimiento de la ley, a aquellos conductores que violan o infringen la ley de forma reiterada o peligrosa, especialmente por cometer infracciones de tránsito tales como: conducir en estado de ebriedad, multiplicidad de infracciones peligrosas o muy peligrosas o provocar accidentes mortales en estado de ebriedad.</li><br>
+                    <li><b>TRANSPORTE DE CARGA:</b> Son los vehículos de fuerza mecánica que transportan objetos fijos y/o animales y que no deben de llevar pasajeros en el espacio destinado a la carga. </li><br>
+                    <li><b>TRANSPORTE PUBLICO: </b>Entiéndase como tal, a aquellos vehículos destinados al transporte de pasajeros y en los cuales no se debe de llevar carga de ninguna naturaleza, salvo el equipaje u objetos de fácil manejo de los pasajeros. </li><br>
+                    <li><b>VALLA:</b> Es la presencia policial en cualquier punto geográfico, previamente determinado para retener y ejercer el control del parque automotor que por él circule. </li><br>
+                    <li><b>VEHÍCULO: </b>Es todo aparato que circule por la vía pública, excepto los comprendidos en la definición de peatón.<br><br>Estos por su naturaleza se dividen en tres grandes grupos: <br><br> <b>a. Tracción Animal:</b> Movidos por animales de tiro, silla o cualquier clase, tales como coche, o carreta.<br><b>b. Tracción Humana: </b>Los que se impulsan por fuerza muscular del hombre, como carretillas o carretones de mano, bicicletas, velocípedos.<br><b>c. Tracción Mecánica: </b>Los movidos por cualquier fuerza motriz, provengan o no de acción exterior, tales como: automóviles, camiones, buses y motos.</li><br>
+                    <li><b>VÍA PUBLICA: </b>Es todo camino o calle destinado al tránsito de vehículos, personas, animales o cualquier otro. </li><br>
+                    <li><b>VÍA RURAL: </b>Se refiere a las carreteras, caminos y autopistas abiertas al tránsito vehicular y cuya función es unir los diferentes centros urbanos. </li><br>
+                    <li><b>VÍA URBANA: </b>Se refiere a calles, avenidas y autopistas de uso exclusivo para la circulación de vehículos automotor. </li><br>
+                    <li><b>VELOCIDAD DE OPERACIÓN: </b>Es la velocidad máxima permitida al conductor de un medio de transporte automotor en correspondencia al diseño y uso de la vía.</li><br>
+                    <li><b>VELOCIDAD DE CRUSERO: </b>Es la velocidad media de circulación en la vía.</li><br>
+                    <li><b>VELOCIDAD DE DISEÑO: </b>Es la velocidad máxima que permite la vía.</li><br>
+                    <li><b>ZONA DE SEGURIDAD: </b>Es el área marcada en la calzada para la circulación de peatones, en las intersecciones y reguladas ocasionalmente por semáforos.</li><br>
+                    <li><b>ZONA ESCOLAR O CRUCES ESCOLARES: </b>Es el área de la calzada señalizada para el cruce de niños, adolescentes y jóvenes.</li><br>
+                </ol>
+                <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+            </center>
+        </div>
+    </div>
+
+    <div data-role="page" id="art4">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 4. Derecho de matrícula como especie fiscal.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Créase el Derecho de Matrícula como Especie Fiscal, cuyo valor será recaudado por la Dirección General de Ingresos de la República de Nicaragua y por el cual se entiende el derecho que adquiere todo propietario de vehículo al momento de la inscripción o renovación del derecho adquirido, ante las oficinas de Seguridad de Tránsito de la Policía Nacional. </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art5">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 5. Creación de especies fiscales.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Créanse las especies fiscales de placas, licencias de circulación, de derecho de matrícula y calcomanías, cuyas características generales, tamaño, material, diseño y tipo serán determinados por la Autoridad de Aplicación de la presente Ley. </p>
+                <p id="parrafoArto">Existirán placas especiales para los funcionarios del Servicio Diplomático, Cuerpo Consular y Misión Internacional, las que se identificarán con las letras CD, CC, MI, respectivamente; así mismo, las placas para uso personal del Presidente y Vicepresidente de la República, Diputados ante la Asamblea Nacional y el Parlamento Centroamericano, Magistrados de la Corte Suprema de Justicia y los del Consejo Supremo Electoral. </p>
+                <p id="parrafoArto">También se constituyen en placas especiales las utilizadas por los vehículos automotor propiedad del Estado y las de la Policía Nacional. </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art6">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 6. Requisitos y procedimientos.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Los propietarios de vehículos que circulen en el territorio nacional, deben de cumplir obligatoriamente con los requisitos y procedimientos que se establecen en la presente Ley, así como también con las normas de carácter administrativo relativas a procedimientos. </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art7">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 7. Coordinaciones.</h1></b></center>
+            <center>
+                <p id="parrafoArto">El Ministerio de Hacienda y Crédito Público, los Gobiernos Locales y la Policía Nacional, a través de la Especialidad Nacional de Seguridad de Tránsito, de conformidad con la Ley No. 290, Ley de Organización, Competencia y Procedimientos del Poder Ejecutivo y la Ley Nº 228, Ley de la Policía Nacional, publicadas en La Gaceta, Diario Oficial número 102 del tres de junio de 1998 y en la número 162 del 28 de Agosto de 1996 respectivamente, deberán establecer las coordinaciones necesarias para la aplicación de la presente Ley y los respectivos procedimientos administrativos. </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art8">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 8. Pago   de   arancel   de   derecho   de   matrícula,   placas,   licencia   de   circulación   y   
+calcomanías.</h1></b></center>
+            <center>
+                <p id="parrafoArto">Para los fines y efectos de la presente Ley, los propietarios de vehículos automotores deberán de pagar el arancel de derecho de matrícula, placas, licencia de circulación y calcomanías de acuerdo a los valores siguientes: </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <div data-role="page" id="art9">
+        <div data-role="main" class="ui-content">
+            <center><b><h1>Arto. 9. Pago   de   arancel   de   derecho   de   matrícula,   placas,   licencia   de   circulación   y   
+calcomanías.</h1></b></center>
+            <center>
+                <p id="parrafoArto">El Ministerio de Hacienda y Crédito Público, los Gobiernos Locales y la Policía Nacional, a través de la Especialidad Nacional de Seguridad de Tránsito, de conformidad con la Ley No. 290, Ley de Organización, Competencia y Procedimientos del Poder Ejecutivo y la Ley Nº 228, Ley de la Policía Nacional, publicadas en La Gaceta, Diario Oficial número 102 del tres de junio de 1998 y en la número 162 del 28 de Agosto de 1996 respectivamente, deberán establecer las coordinaciones necesarias para la aplicación de la presente Ley y los respectivos procedimientos administrativos. </p>
+            </center>
+            <a href="#" class="ui-btn ui-corner-all ui-btn-inline footer-button-left ui-btn-icon-left ui-icon-arrow-l" onclick="loadPageLey()">Volver</a>
+        </div>
+    </div>
+
+    <script>
+        function loadPageLey() {
+            $.mobile.changePage("#paginaLey431");
+        }
+    </script>
+
 </body>
 
 </html>
