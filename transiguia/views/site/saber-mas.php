@@ -36,15 +36,10 @@ $data = ArrayHelper::map(ArticuloDescripcion::find()->asArray()->all(), 'Id', 'A
         </tr>
         </tbody>
     </table>
-
-    <input type="hidden" id="Arto">
-    <input type="hidden" id="Descrpcion">
-
-    <div class="jumbotron">
-        <div class="jumbotron">
-            <h1>{{articulo}}</h1>
-            <p>{{descripcion}}</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <textarea class="form-control" name="" id="Descrpcion" cols="100" rows="10" readonly></textarea>
         </div>
     </div>
 
@@ -57,8 +52,7 @@ $script = <<< JS
         $.get('get-descripcion',{Id:Id}, function(data) {
             var data = $.parseJSON(data);
             
-            $('#Arto').attr('value', data.Articulo);
-            $('#Descrpcion').attr('value', data.Descripcion);
+            $('#Descrpcion').val(data.Descripcion);
         })
     });
 JS;
