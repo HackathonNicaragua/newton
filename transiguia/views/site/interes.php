@@ -24,10 +24,7 @@ Phone: 2252 1515</p>
             <h2>DriveMaster Management School Nicaragua</h2>
 
             <p>Address: Resid.Paseo del Valle #58, Pista Sub Urb. Memorial Sandino 1c. oeste, 1c.norte, Managua 13018
-              Realiza una serie de practicas que te ayudaran a saber si estas listo para el examen de conduccion, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur.</p>
+              Realiza una serie de practicas que te ayudaran a saber si estas listo para el examen de conduccion.</p>
 
             <p><a class="btn btn-default" href="https://goo.gl/maps/TjAJBg7sSUA2">Como llegar &raquo;</a></p>
         </div>
