@@ -9,7 +9,7 @@
     <script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="themes/temarojo.min.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-    <!--    <script src="js/cordova.js"></script>-->
+    <script src="js/cordova.js"></script>
 
     <script>
         //Esta funcion es para lo mismo que la del panel, ya que como es un header exterior, debe ser "Inicializado"
@@ -1763,6 +1763,99 @@ animal.</h1></b></center>
             document.getElementById("textoCalc").innerHTML = "Tu total es C$ " + totalMulta;
         }
         
+    </script>
+    
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onDeviceReady() {
+            document.addEventListener("backbutton", onBackKeyPress, false);
+        }
+
+        function onBackKeyPress() {
+            /* If the current page is the login page, disable the button completely (aka do nothing) */
+            if ($.mobile.activePage.attr('id') == 'paginaPrincipal') {
+                if (confirm("¿Estas seguro que quieres salir?")) {
+                    navigator.app.exitApp();
+                } else {
+                    return false;
+                }
+            } else if ($.mobile.activePage.attr('id') == 'pregunta1') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta2') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta3') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta4') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta5') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta6') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta7') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta8') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta9') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta10') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta11') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta12') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta13') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta14') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta15') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta16') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta17') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta18') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta19') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta20') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta21') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta22') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta23') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta24') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta25') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta26') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta27') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta28') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta29') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta30') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta31') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta32') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta33') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta34') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta35') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta36') {
+                $.mobile.changePage("#paginaTest");
+            } else if ($.mobile.activePage.attr('id') == 'pregunta37') {
+                $.mobile.changePage("#paginaTest");
+            }
+        }
     </script>
 </body>
 
