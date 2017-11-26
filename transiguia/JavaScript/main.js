@@ -29,7 +29,7 @@ function PreguntasCotroller($scope, $http)
             exportEnabled: true,
             animationEnabled: true,
             title:{
-                text: "State Operating Funds"
+                text: "Resultado de la prueba"
             },
             legend:{
                 cursor: "pointer",
