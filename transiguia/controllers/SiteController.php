@@ -12,6 +12,7 @@ use app\models\ContactForm;
 use app\models\Pregunta;
 use app\models\Multa;
 use yii\helpers\Json;
+use app\models\ArticuloDescripcion;
 
 class SiteController extends Controller
 {
@@ -45,6 +46,12 @@ class SiteController extends Controller
     {
         $multa = Multa::find()->where(['Descripcion'=>$Descripcion])->one();
         echo Json::encode($multa);
+    }
+
+    public function actionGetDescripcion($Id)
+    {
+        $articulo = ArticuloDescripcion::find()->where(['Id'=>$Id])->one();
+        echo Json::encode($articulo);
     }
 
     /**
