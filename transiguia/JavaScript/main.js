@@ -6,9 +6,8 @@ function PreguntasCotroller($scope, $http)
 
     $scope.EsCorrecta = function () {
         total = total + parseInt(1);
-        $('#Pregunta1').hide('slow', function () {
-            $('#Pregunta1').show('slow');
-        });
+        $('#Pregunta0').hide('slow');
+        $
     };
 }
 app.controller('PreguntasCotroller', PreguntasCotroller);
